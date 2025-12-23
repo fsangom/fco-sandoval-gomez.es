@@ -1,19 +1,19 @@
-name: "Nueva Publicacion"
-description: "Anadir un enlace a un articulo publicado en un medio externo"
-title: "[Publicacion]: "
+name: "Nueva Publicación"
+description: "Añadir un enlace a un artículo publicado en un medio externo"
+title: "[Publicación]: "
 labels: ["nueva-publicacion"]
 body:
   - type: markdown
     attributes:
       value: |
-        ## Nueva Publicacion
-        Rellena los campos para anadir un enlace a un articulo publicado en un medio externo.
+        ## Nueva Publicación
+        Rellena los campos para añadir un enlace a un artículo publicado en un medio externo.
 
   - type: input
     id: title
     attributes:
-      label: Titulo
-      description: Titulo del articulo
+      label: Título
+      description: Título del artículo
       placeholder: "Ej: El patrimonio amenazado de Caravaca"
     validations:
       required: true
@@ -21,9 +21,9 @@ body:
   - type: input
     id: description
     attributes:
-      label: Descripcion
-      description: Resumen breve del articulo (1-2 frases)
-      placeholder: "Ej: Articulo sobre los edificios historicos en riesgo de desaparicion"
+      label: Descripción
+      description: Resumen breve del artículo (1-2 frases)
+      placeholder: "Ej: Artículo sobre los edificios históricos en riesgo de desaparición"
     validations:
       required: true
 
@@ -31,7 +31,7 @@ body:
     id: date
     attributes:
       label: Fecha
-      description: Fecha de publicacion (AAAA-MM-DD). Dejar vacio para usar la fecha de hoy.
+      description: Fecha de publicación (AAAA-MM-DD). Dejar vacío para usar la fecha de hoy.
       placeholder: "2025-01-15"
     validations:
       required: false
@@ -40,7 +40,7 @@ body:
     id: source
     attributes:
       label: Fuente
-      description: Nombre del medio donde se publico
+      description: Nombre del medio donde se publicó
       placeholder: "El Noroeste Digital"
     validations:
       required: true
@@ -49,7 +49,7 @@ body:
     id: url
     attributes:
       label: URL
-      description: Enlace al articulo original
+      description: Enlace al artículo original
       placeholder: "https://elnoroestedigital.com/..."
     validations:
       required: true

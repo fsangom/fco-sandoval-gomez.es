@@ -1,29 +1,29 @@
-name: "Nuevo Articulo"
-description: "Crear un nuevo articulo o reflexion"
-title: "[Articulo]: "
+name: "Nuevo Artículo"
+description: "Crear un nuevo artículo o reflexión"
+title: "[Artículo]: "
 labels: ["nuevo-articulo"]
 body:
   - type: markdown
     attributes:
       value: |
-        ## Nuevo Articulo
-        Rellena los campos para crear un nuevo articulo. Puedes arrastrar imagenes directamente en el campo de imagen.
+        ## Nuevo Artículo
+        Rellena los campos para crear un nuevo artículo. Puedes arrastrar imágenes directamente en el campo de imagen.
 
   - type: input
     id: title
     attributes:
-      label: Titulo
-      description: El titulo del articulo
-      placeholder: "Ej: Patrimonio rural y despoblacion"
+      label: Título
+      description: El título del artículo
+      placeholder: "Ej: Patrimonio rural y despoblación"
     validations:
       required: true
 
   - type: input
     id: description
     attributes:
-      label: Descripcion
-      description: Resumen breve del articulo (1-2 frases, sin imagenes)
-      placeholder: "Ej: Reflexion sobre el impacto de la despoblacion en el patrimonio rural espanol"
+      label: Descripción
+      description: Resumen breve del artículo (1-2 frases, sin imágenes)
+      placeholder: "Ej: Reflexión sobre el impacto de la despoblación en el patrimonio rural español"
     validations:
       required: true
 
@@ -31,7 +31,7 @@ body:
     id: date
     attributes:
       label: Fecha
-      description: Fecha de publicacion (AAAA-MM-DD). Dejar vacio para usar la fecha de hoy.
+      description: Fecha de publicación (AAAA-MM-DD). Dejar vacío para usar la fecha de hoy.
       placeholder: "2025-01-15"
     validations:
       required: false
@@ -39,8 +39,8 @@ body:
   - type: dropdown
     id: category
     attributes:
-      label: Categoria
-      description: Tipo de articulo
+      label: Categoría
+      description: Tipo de artículo
       options:
         - Patrimonio
         - Reflexiones
@@ -51,8 +51,8 @@ body:
     id: image
     attributes:
       label: Imagen destacada
-      description: Arrastra aqui la imagen o pega una URL. La imagen aparecera en la tarjeta del articulo.
-      placeholder: "Arrastra una imagen aqui..."
+      description: Arrastra aquí la imagen o pega una URL. La imagen aparecerá en la tarjeta del artículo.
+      placeholder: "Arrastra una imagen aquí..."
     validations:
       required: false
 
@@ -60,14 +60,14 @@ body:
     id: content
     attributes:
       label: Contenido
-      description: El contenido completo del articulo. Puedes usar Markdown (## para titulos, **negrita**, *cursiva*, etc.)
+      description: El contenido completo del artículo. Puedes usar Markdown (## para títulos, **negrita**, *cursiva*, etc.)
       placeholder: |
-        ## Primera seccion
+        ## Primera sección
 
-        Escribe aqui el contenido...
+        Escribe aquí el contenido...
 
-        ## Segunda seccion
+        ## Segunda sección
 
-        Continua escribiendo...
+        Continúa escribiendo...
     validations:
       required: false

@@ -1,5 +1,5 @@
 name: "Nuevo Trabajo"
-description: "Crear un nuevo proyecto de arquitectura o conservacion"
+description: "Crear un nuevo proyecto de arquitectura o conservación"
 title: "[Trabajo]: "
 labels: ["nuevo-trabajo"]
 body:
@@ -7,23 +7,23 @@ body:
     attributes:
       value: |
         ## Nuevo Trabajo
-        Rellena los campos para anadir un proyecto. Puedes arrastrar imagenes directamente en el campo de imagen.
+        Rellena los campos para añadir un proyecto. Puedes arrastrar imágenes directamente en el campo de imagen.
 
   - type: input
     id: title
     attributes:
-      label: Titulo
+      label: Título
       description: Nombre del proyecto
-      placeholder: "Ej: Rehabilitacion Casa de la Virgen"
+      placeholder: "Ej: Rehabilitación Casa de la Virgen"
     validations:
       required: true
 
   - type: input
     id: description
     attributes:
-      label: Descripcion
-      description: Descripcion breve del proyecto (1-2 frases, sin imagenes)
-      placeholder: "Ej: Proyecto de rehabilitacion de una casa tradicional del siglo XVIII"
+      label: Descripción
+      description: Descripción breve del proyecto (1-2 frases, sin imágenes)
+      placeholder: "Ej: Proyecto de rehabilitación de una casa tradicional del siglo XVIII"
     validations:
       required: true
 
@@ -31,7 +31,7 @@ body:
     id: date
     attributes:
       label: Fecha
-      description: Fecha del proyecto (AAAA-MM-DD). Dejar vacio para usar la fecha de hoy.
+      description: Fecha del proyecto (AAAA-MM-DD). Dejar vacío para usar la fecha de hoy.
       placeholder: "2025-01-15"
     validations:
       required: false
@@ -39,19 +39,19 @@ body:
   - type: dropdown
     id: category
     attributes:
-      label: Categoria
+      label: Categoría
       description: Tipo de proyecto
       options:
-        - Rehabilitacion
-        - Investigacion
+        - Rehabilitación
+        - Investigación
     validations:
       required: true
 
   - type: input
     id: location
     attributes:
-      label: Ubicacion
-      description: Ciudad y region del proyecto
+      label: Ubicación
+      description: Ciudad y región del proyecto
       placeholder: "Caravaca de la Cruz, Murcia"
     validations:
       required: true
@@ -59,8 +59,8 @@ body:
   - type: input
     id: year
     attributes:
-      label: Ano
-      description: Ano o rango de anos del proyecto
+      label: Año
+      description: Año o rango de años del proyecto
       placeholder: "2025 o 2020-2024"
     validations:
       required: true
@@ -69,8 +69,8 @@ body:
     id: image
     attributes:
       label: Imagen destacada
-      description: Arrastra aqui la imagen del proyecto o pega una URL.
-      placeholder: "Arrastra una imagen aqui..."
+      description: Arrastra aquí la imagen del proyecto o pega una URL.
+      placeholder: "Arrastra una imagen aquí..."
     validations:
       required: false
 
@@ -78,14 +78,14 @@ body:
     id: content
     attributes:
       label: Contenido
-      description: Descripcion detallada del proyecto. Puedes usar Markdown.
+      description: Descripción detallada del proyecto. Puedes usar Markdown.
       placeholder: |
-        ## Descripcion del proyecto
+        ## Descripción del proyecto
 
-        Escribe aqui la descripcion detallada...
+        Escribe aquí la descripción detallada...
 
-        ## Metodologia
+        ## Metodología
 
-        Describe la metodologia empleada...
+        Describe la metodología empleada...
     validations:
       required: false
