@@ -177,6 +177,14 @@
         {% if item.description %}
         <p class="investigacion-card__description">{{ item.description }}</p>
         {% endif %}
+        {% if item.extra.youtube %}
+        <div class="investigacion-card__video">
+            <iframe src="https://www.youtube.com/embed/{{ item.extra.youtube }}"
+                    title="{{ item.title }}" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+        {% endif %}
     </div>
 </article>
 {% endmacro %}

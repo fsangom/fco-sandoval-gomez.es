@@ -11,7 +11,7 @@
 # 4. Guarda el archivo (normalmente no hace falta contenido adicional)
 #
 # CAMPOS OBLIGATORIOS: title, description, date, category, year
-# CAMPOS OPCIONALES: original_title, coauthors, links
+# CAMPOS OPCIONALES: original_title, coauthors, links, youtube
 # IMPORTANTE: Borra la linea "draft = true" cuando quieras publicar
 # =============================================================================
 
@@ -54,4 +54,8 @@ url = "https://www.researchgate.net/publication/TU-ENLACE"
 # [[extra.links]]
 # name = "Otro enlace"
 # url = "https://..."
+
+# OPCIONAL: Video de YouTube (solo el ID del video)
+# Ejemplo: para https://www.youtube.com/watch?v=abc123 usar "abc123"
+# youtube = "abc123"
 +++

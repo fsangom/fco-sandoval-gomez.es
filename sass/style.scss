@@ -693,6 +693,23 @@ main {
         line-height: 1.6;
         margin: 0;
     }
+
+    &__video {
+        position: relative;
+        width: 100%;
+        max-width: 640px;
+        padding-bottom: 56.25%;
+        margin-top: 1.5rem;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+    }
 }
 
 .external-link {
