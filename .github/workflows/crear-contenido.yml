@@ -2,7 +2,7 @@ name: Crear Contenido desde Issue
 
 on:
   issues:
-    types: [opened]
+    types: [opened, labeled]
 
 # ============================================================================
 # USUARIOS AUTORIZADOS
