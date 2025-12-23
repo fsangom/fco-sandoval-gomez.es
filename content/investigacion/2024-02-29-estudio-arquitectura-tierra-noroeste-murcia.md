@@ -4,7 +4,7 @@ description = "Conferencia impartida por Francisco Sandoval Gómez (PEGASO-UPV),
 date = 2024-02-29
 
 [extra]
-category = "Conference Paper"
+category = "Conference"
 year = "2024"
 youtube = "g7s3CrqRYNs"
 +++
