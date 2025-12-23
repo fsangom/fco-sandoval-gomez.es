@@ -4,6 +4,13 @@ on:
   issues:
     types: [opened]
 
+# ============================================================================
+# USUARIOS AUTORIZADOS
+# Solo estos usuarios pueden crear contenido. Añade el username de GitHub.
+# ============================================================================
+env:
+  AUTHORIZED_USERS: "Chemaclass,CLIENT_USERNAME_HERE"
+
 permissions:
   contents: write
   issues: write
@@ -14,10 +21,43 @@ jobs:
     if: contains(github.event.issue.labels.*.name, 'nuevo-articulo') || contains(github.event.issue.labels.*.name, 'nueva-investigacion') || contains(github.event.issue.labels.*.name, 'nuevo-trabajo') || contains(github.event.issue.labels.*.name, 'nueva-publicacion')
 
     steps:
+      - name: Check authorized user
+        id: auth
+        run: |
+          AUTHOR="${{ github.event.issue.user.login }}"
+          if [[ ",$AUTHORIZED_USERS," == *",$AUTHOR,"* ]]; then
+            echo "authorized=true" >> $GITHUB_OUTPUT
+            echo "User $AUTHOR is authorized"
+          else
+            echo "authorized=false" >> $GITHUB_OUTPUT
+            echo "User $AUTHOR is NOT authorized"
+          fi
+
+      - name: Reject unauthorized user
+        if: steps.auth.outputs.authorized == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `❌ **No autorizado**\n\nLo siento, solo usuarios autorizados pueden crear contenido a traves de este formulario.`
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed'
+            });
+            core.setFailed('User not authorized');
+
       - name: Checkout
+        if: steps.auth.outputs.authorized == 'true'
         uses: actions/checkout@v4
 
       - name: Parse issue and create content
+        if: steps.auth.outputs.authorized == 'true'
         uses: actions/github-script@v7
         with:
           script: |
@@ -172,6 +212,7 @@ jobs:
             core.setOutput('content_type', contentType);
 
       - name: Commit and push
+        if: steps.auth.outputs.authorized == 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -180,6 +221,7 @@ jobs:
           git push
 
       - name: Close issue with comment
+        if: steps.auth.outputs.authorized == 'true'
         uses: actions/github-script@v7
         with:
           script: |
