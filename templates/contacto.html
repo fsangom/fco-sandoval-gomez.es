@@ -1,71 +1,73 @@
 {% extends "base.html" %}
+{% import "macros/sections.html" as sections %}
 
 {% block title %}Contacto | Francisco Sandoval Gómez{% endblock %}
 
 {% block content %}
 <section class="contact-page">
     <div class="container">
-        <h1>Contacto</h1>
-        <p class="contact-intro">Para consultas profesionales, colaboraciones o simplemente para intercambiar ideas sobre arquitectura, patrimonio o cualquier tema que te haya interesado de esta web.</p>
+        {{ sections::page_header_styled(title="Contacto", description="Para consultas profesionales, colaboraciones o simplemente para intercambiar ideas sobre arquitectura, patrimonio o cualquier tema que te haya interesado de esta web.") }}
 
-        <div class="contact-cards">
-            <a href="mailto:{{ config.extra.email }}" class="contact-card">
-                <div class="contact-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect width="20" height="16" x="2" y="4" rx="2"/>
-                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                    </svg>
-                </div>
-                <div class="contact-details">
-                    <h3>Correo electrónico</h3>
-                    <span>{{ config.extra.email }}</span>
-                </div>
-            </a>
+        <div class="contact-content">
+            <div class="contact-main">
+                <a href="mailto:{{ config.extra.email }}" class="contact-card contact-card--primary">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2"/>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">Correo electrónico</span>
+                        <span class="contact-value">{{ config.extra.email }}</span>
+                        <span class="contact-cta">Enviar mensaje <span class="arrow">→</span></span>
+                    </div>
+                </a>
+            </div>
 
-            <a href="{{ config.extra.social.instagram }}" target="_blank" rel="noopener" class="contact-card">
-                <div class="contact-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-                    </svg>
-                </div>
-                <div class="contact-details">
-                    <h3>Instagram</h3>
-                    <span>@mr.dovale</span>
-                </div>
-            </a>
+            <div class="contact-grid">
+                <a href="{{ config.extra.social.instagram }}" target="_blank" rel="noopener" class="contact-card">
+                    <div class="contact-icon contact-icon--instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">Instagram</span>
+                        <span class="contact-value">@mr.dovale</span>
+                    </div>
+                </a>
 
-            <a href="{{ config.extra.social.linkedin }}" target="_blank" rel="noopener" class="contact-card">
-                <div class="contact-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                        <rect width="4" height="12" x="2" y="9"/>
-                        <circle cx="4" cy="4" r="2"/>
-                    </svg>
-                </div>
-                <div class="contact-details">
-                    <h3>LinkedIn</h3>
-                    <span>Francisco Sandoval Gómez</span>
-                </div>
-            </a>
+                <a href="{{ config.extra.social.linkedin }}" target="_blank" rel="noopener" class="contact-card">
+                    <div class="contact-icon contact-icon--linkedin">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect width="4" height="12" x="2" y="9"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">Francisco Sandoval Gómez</span>
+                    </div>
+                </a>
 
-            <a href="{{ config.extra.social.researchgate }}" target="_blank" rel="noopener" class="contact-card">
-                <div class="contact-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-                        <path d="M12 17h.01"/>
-                    </svg>
-                </div>
-                <div class="contact-details">
-                    <h3>ResearchGate</h3>
-                    <span>Francisco Sandoval Gómez</span>
-                </div>
-            </a>
+                <a href="{{ config.extra.social.researchgate }}" target="_blank" rel="noopener" class="contact-card">
+                    <div class="contact-icon contact-icon--researchgate">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">ResearchGate</span>
+                        <span class="contact-value">Perfil académico</span>
+                    </div>
+                </a>
+            </div>
         </div>
-
-        <p class="contact-note"><em>Respondo personalmente a todos los mensajes, aunque a veces puedo tardar unos días. Gracias por tu paciencia y tu interés.</em></p>
     </div>
 </section>
 {% endblock %}
