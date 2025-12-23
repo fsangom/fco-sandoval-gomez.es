@@ -28,9 +28,9 @@
 
 {% elif section.path is containing("trabajos") %}
 {# Trabajos: 2-column grid with large images #}
-{{ sections::page_header(title=section.title, description=section.description | default(value="")) }}
 <section class="trabajos-page">
     <div class="container">
+        {{ sections::page_header_styled(title=section.title, description=section.description | default(value="")) }}
         <div class="trabajos-grid">
             {% for page in pages %}
                 {{ cards::trabajo_card(trabajo=page) }}

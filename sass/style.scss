@@ -475,7 +475,14 @@ main {
 
 // Trabajos Page
 .trabajos-page {
-    padding: 0 0 5rem;
+    padding: 4rem 0 5rem;
+    background: $color-bg-light;
+}
+
+// Sobre mí Page
+.sobre-mi-page {
+    padding: 4rem 0 5rem;
+    background: $color-bg-light;
 }
 
 .trabajos-grid {

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% import "macros/sections.html" as sections %}
+
+{% block title %}{{ page.title }} | Francisco Sandoval{% endblock %}
+
+{% block content %}
+<section class="sobre-mi-page">
+    <div class="container">
+        {{ sections::page_header_styled(title=page.title, description=page.description | default(value="")) }}
+        <div class="prose">
+            {{ page.content | safe }}
+        </div>
+    </div>
+</section>
+{% endblock %}
