@@ -127,7 +127,7 @@
 
 {# Investigacion card - academic publication card #}
 {% macro investigacion_card(item) %}
-{% set first_link = item.extra.links | first %}
+{% set first_link = item.extra.links | default(value=[]) | first %}
 <article class="investigacion-card">
     <div class="investigacion-card__content">
         <div class="post-meta">
