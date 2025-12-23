@@ -18,11 +18,11 @@ body:
     validations:
       required: true
 
-  - type: textarea
+  - type: input
     id: description
     attributes:
       label: Descripcion
-      description: Descripcion breve del proyecto (1-2 frases)
+      description: Descripcion breve del proyecto (1-2 frases, sin imagenes)
       placeholder: "Ej: Proyecto de rehabilitacion de una casa tradicional del siglo XVIII"
     validations:
       required: true

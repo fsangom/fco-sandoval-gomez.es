@@ -22,8 +22,9 @@ body:
     id: description
     attributes:
       label: Descripcion / Abstract
-      description: Resumen o abstract de la investigacion
+      description: Resumen o abstract de la investigacion (solo texto, sin imagenes)
       placeholder: "Ej: Este articulo analiza el papel del agua en la arquitectura tradicional..."
+      render: text
     validations:
       required: true
 

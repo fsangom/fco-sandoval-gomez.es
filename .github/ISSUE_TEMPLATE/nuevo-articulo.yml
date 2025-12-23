@@ -18,11 +18,11 @@ body:
     validations:
       required: true
 
-  - type: textarea
+  - type: input
     id: description
     attributes:
       label: Descripcion
-      description: Resumen breve del articulo (1-2 frases)
+      description: Resumen breve del articulo (1-2 frases, sin imagenes)
       placeholder: "Ej: Reflexion sobre el impacto de la despoblacion en el patrimonio rural espanol"
     validations:
       required: true
