@@ -173,7 +173,7 @@
             <span class="date">{{ item.date | date(format="%B %Y") }}</span>
             {% endif %}
         </div>
-        <h3>{{ item.title }}</h3>
+        <h3>{% if item.extra.url %}<a href="{{ item.extra.url }}" target="_blank" rel="noopener">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h3>
         {% if item.description %}
         <p>{{ item.description }}</p>
         {% endif %}

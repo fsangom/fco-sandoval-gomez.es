@@ -3,16 +3,13 @@ title = "Sobre mí"
 template = "page.html"
 +++
 
-Francisco Sandoval es arquitecto especializado en conservación del patrimonio arquitectónico. Su trabajo se centra en la intersección entre la arquitectura contemporánea y la preservación de edificios históricos.
+Francisco Sandoval Gómez es arquitecto especializado en conservación del patrimonio arquitectónico. El criterio de su trabajo se orienta hacia la valorización de las técnicas tradicionales y el empleo de materiales sostenibles en las intervenciones arquitectónicas. Desarrolla en la Universitat Politècnica de València la línea de investigación de la conservación, restauración y reutilización adaptativa del patrimonio arquitectónico construido con tierra y su comportamiento climático mediante el método de análisis de ciclo de vida del edificio para mejorar el ahorro energético y su balance ambiental.
 
 ## Formación
 
-Graduado en Arquitectura por la Universidad de... con especialización en Restauración y Conservación del Patrimonio.
+- Arquitecto por la Universidad Politécnica de Cartagena
+- Máster en Conservación del Patrimonio Arquitectónico por la Universitat Politècnica de València
 
-## Experiencia
+## Enlaces
 
-A lo largo de su carrera ha participado en numerosos proyectos de restauración de edificios históricos, así como en el diseño de viviendas contemporáneas que dialogan con su entorno patrimonial.
-
-## Filosofía
-
-Su enfoque se basa en la comprensión profunda del contexto histórico y cultural de cada proyecto, buscando siempre el equilibrio entre la preservación y la funcionalidad contemporánea.
+- [ResearchGate](https://www.researchgate.net/profile/Francisco-Gomez-53)
