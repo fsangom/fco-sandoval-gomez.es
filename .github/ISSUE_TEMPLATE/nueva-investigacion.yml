@@ -21,7 +21,7 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: Descripción / Abstract
+      label: Descripción
       description: Resumen o abstract de la investigación (solo texto, sin imágenes)
       placeholder: "Ej: Este artículo analiza el papel del agua en la arquitectura tradicional..."
       render: text
