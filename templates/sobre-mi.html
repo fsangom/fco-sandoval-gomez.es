@@ -7,7 +7,14 @@
 {% block content %}
 <section class="sobre-mi-page">
     <div class="container">
-        {{ sections::page_header_styled(title=page.title, description=page.description | default(value="")) }}
+        <div class="sobre-mi-header">
+            <div class="sobre-mi-avatar">
+                <img src="{{ get_url(path='images/sando-avatar.jpg') }}" alt="Francisco Sandoval Gómez">
+            </div>
+            <div class="sobre-mi-intro">
+                {{ sections::page_header_styled(title=page.title, description=page.description | default(value="")) }}
+            </div>
+        </div>
         <div class="prose">
             {{ page.content | safe }}
         </div>

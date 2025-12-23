@@ -502,6 +502,43 @@ main {
     background: $color-bg-light;
 }
 
+.sobre-mi-header {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+}
+
+.sobre-mi-avatar {
+    flex-shrink: 0;
+
+    img {
+        width: 250px;
+        height: 380px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.sobre-mi-intro {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .sobre-mi-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .sobre-mi-avatar img {
+        width: 200px;
+        height: 240px;
+    }
+}
+
 .trabajos-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
