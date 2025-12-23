@@ -95,11 +95,12 @@ jobs:
             // Extract image URL from markdown image or direct URL
             function extractImageUrl(text) {
               if (!text) return '';
-              // Match ![alt](url) or just URL
+              // Match ![alt](url) format first
               const imgMatch = text.match(/!\[.*?\]\((.*?)\)/);
-              if (imgMatch) return imgMatch[1];
-              const urlMatch = text.match(/(https?:\/\/[^\s]+)/);
-              if (urlMatch) return urlMatch[1];
+              if (imgMatch) return imgMatch[1].trim();
+              // Match plain URL, excluding trailing punctuation
+              const urlMatch = text.match(/(https?:\/\/[^\s"'<>]+)/);
+              if (urlMatch) return urlMatch[1].replace(/[)\]"']+$/, '').trim();
               return '';
             }
 
