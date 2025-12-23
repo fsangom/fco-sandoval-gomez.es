@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fco-sandoval-gomez.es/sitemap.xml

@@ -10,6 +10,10 @@ compile_sass = true
 # Search index
 build_search_index = false
 
+# Generate sitemap
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+
 # Slugify settings
 [slugify]
 paths = "on"

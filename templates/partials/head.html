@@ -1,11 +1,111 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{# SEO Meta Tags #}
 <meta name="description" content="{{ description | default(value=config.description) }}">
-<link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+<meta name="author" content="{{ config.extra.author }}">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{ current_url | default(value=config.base_url) }}">
+
+{# Open Graph / Facebook #}
+<meta property="og:type" content="{% if page %}article{% else %}website{% endif %}">
+<meta property="og:url" content="{{ current_url | default(value=config.base_url) }}">
+<meta property="og:title" content="{{ title | default(value=config.title) }}">
+<meta property="og:description" content="{{ description | default(value=config.description) }}">
+<meta property="og:site_name" content="{{ config.title }}">
+<meta property="og:locale" content="es_ES">
+{% if page.extra.image %}
+<meta property="og:image" content="{{ get_url(path=page.extra.image) }}">
+{% elif section.extra.image %}
+<meta property="og:image" content="{{ get_url(path=section.extra.image) }}">
+{% else %}
+<meta property="og:image" content="{{ get_url(path='images/hero-bg.jpg') }}">
+{% endif %}
+
+{# Twitter Card #}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title | default(value=config.title) }}">
+<meta name="twitter:description" content="{{ description | default(value=config.description) }}">
+{% if page.extra.image %}
+<meta name="twitter:image" content="{{ get_url(path=page.extra.image) }}">
+{% elif section.extra.image %}
+<meta name="twitter:image" content="{{ get_url(path=section.extra.image) }}">
+{% else %}
+<meta name="twitter:image" content="{{ get_url(path='images/hero-bg.jpg') }}">
+{% endif %}
+
+{# Article specific meta for blog posts #}
+{% if page %}
+{% if page.date %}
+<meta property="article:published_time" content="{{ page.date | date(format='%Y-%m-%dT%H:%M:%S') }}">
+{% endif %}
+{% if page.updated %}
+<meta property="article:modified_time" content="{{ page.updated | date(format='%Y-%m-%dT%H:%M:%S') }}">
+{% endif %}
+<meta property="article:author" content="{{ config.extra.author }}">
+{% endif %}
+
+{# Fonts #}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<!-- Cronitor RUM -->
+
+{# Stylesheet #}
+<link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+
+{# RSS Feed #}
+<link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path='atom.xml') }}">
+
+{# JSON-LD Structured Data #}
+{% if page %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ page.title }}",
+    "description": "{{ page.description | default(value='') }}",
+    {% if page.extra.image %}"image": "{{ get_url(path=page.extra.image) }}",{% endif %}
+    "author": {
+        "@type": "Person",
+        "name": "{{ config.extra.author }}",
+        "url": "{{ config.base_url }}"
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "{{ config.extra.author }}"
+    },
+    {% if page.date %}"datePublished": "{{ page.date | date(format='%Y-%m-%d') }}",{% endif %}
+    {% if page.updated %}"dateModified": "{{ page.updated | date(format='%Y-%m-%d') }}",{% endif %}
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ page.permalink }}"
+    }
+}
+</script>
+{% else %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ config.title }}",
+    "description": "{{ config.description }}",
+    "url": "{{ config.base_url }}",
+    "author": {
+        "@type": "Person",
+        "name": "{{ config.extra.author }}",
+        "jobTitle": "Arquitecto",
+        "url": "{{ config.base_url }}",
+        "sameAs": [
+            "{{ config.extra.social.linkedin }}",
+            "{{ config.extra.social.instagram }}",
+            "{{ config.extra.social.researchgate }}"
+        ]
+    }
+}
+</script>
+{% endif %}
+
+{# Cronitor RUM #}
 <script async src="https://rum.cronitor.io/script.js"></script>
 <script>
     window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };

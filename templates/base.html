@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ lang | default(value=config.default_language) }}">
 <head>
     <title>{% block title %}{{ config.title | default(value="Francisco Sandoval") }}{% endblock %}</title>
     {% include "partials/head.html" %}
