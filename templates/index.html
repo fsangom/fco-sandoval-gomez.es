@@ -19,9 +19,9 @@
 <section class="articles-section">
     <div class="container">
         {{ sections::section_header(title="Artículos destacados", link_url=get_url(path='articulos'), link_text="Ver todos los artículos") }}
-        <div class="articles-grid">
-            {% for article in articulos.pages | slice(end=4) %}
-                {{ cards::article_card(article=article, featured=loop.index == 1) }}
+        <div class="posts-grid">
+            {% for article in articulos.pages | slice(end=2) %}
+                {{ cards::post_card(post=article) }}
             {% endfor %}
         </div>
     </div>

@@ -1,4 +1,4 @@
-# Francisco Sandoval - Portfolio
+# Francisco Sandoval Gómez - Portfolio
 
 Portfolio personal de arquitectura y conservación del patrimonio.
 

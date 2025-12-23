@@ -1,6 +1,8 @@
 <header class="site-header">
     <div class="container">
-        <a href="{{ get_url(path='/') }}" class="logo">Francisco Sandoval</a>
+        <a href="{{ get_url(path='/') }}" class="logo">
+            <img src="https://i1.rgstatic.net/ii/profile.image/11431281212997391-1702932872384_Q128/Francisco-Gomez-53.jpg" alt="Francisco Sandoval Gómez" class="logo-photo">
+        </a>
         <nav class="main-nav">
             <ul>
                 <li><a href="{{ get_url(path='articulos') }}" {% if current_path is starting_with("/articulos") %}class="active"{% endif %}>Artículos</a></li>
