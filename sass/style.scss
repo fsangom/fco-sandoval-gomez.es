@@ -1163,7 +1163,7 @@ blockquote {
 
 // Contact Page
 .contact-page {
-    padding: 4rem 0 6rem;
+    padding: 4rem 0 3rem;
     background: $color-bg-light;
     min-height: calc(100vh - $header-height);
 }
@@ -1180,7 +1180,6 @@ blockquote {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
-    margin-bottom: 3rem;
 }
 
 .contact-card {
