@@ -1,0 +1,55 @@
+name: "Nueva Publicacion"
+description: "Anadir un enlace a un articulo publicado en un medio externo"
+title: "[Publicacion]: "
+labels: ["nueva-publicacion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Nueva Publicacion
+        Rellena los campos para anadir un enlace a un articulo publicado en un medio externo.
+
+  - type: input
+    id: title
+    attributes:
+      label: Titulo
+      description: Titulo del articulo
+      placeholder: "Ej: El patrimonio amenazado de Caravaca"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripcion
+      description: Resumen breve del articulo (1-2 frases)
+      placeholder: "Ej: Articulo sobre los edificios historicos en riesgo de desaparicion"
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Fecha
+      description: Fecha de publicacion (AAAA-MM-DD). Dejar vacio para usar la fecha de hoy.
+      placeholder: "2025-01-15"
+    validations:
+      required: false
+
+  - type: input
+    id: source
+    attributes:
+      label: Fuente
+      description: Nombre del medio donde se publico
+      placeholder: "El Noroeste Digital"
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Enlace al articulo original
+      placeholder: "https://elnoroestedigital.com/..."
+    validations:
+      required: true

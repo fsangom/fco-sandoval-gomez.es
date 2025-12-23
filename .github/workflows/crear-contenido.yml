@@ -1,0 +1,198 @@
+name: Crear Contenido desde Issue
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  create-content:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'nuevo-articulo') || contains(github.event.issue.labels.*.name, 'nueva-investigacion') || contains(github.event.issue.labels.*.name, 'nuevo-trabajo') || contains(github.event.issue.labels.*.name, 'nueva-publicacion')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Parse issue and create content
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const body = issue.body;
+            const labels = issue.labels.map(l => l.name);
+
+            // Parse issue body (GitHub forms format)
+            function parseIssueBody(body) {
+              const sections = {};
+              const regex = /### (.+?)\n\n([\s\S]*?)(?=\n### |\n*$)/g;
+              let match;
+              while ((match = regex.exec(body)) !== null) {
+                const key = match[1].trim().toLowerCase()
+                  .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+                  .replace(/[^a-z0-9]+/g, '_');
+                let value = match[2].trim();
+                // Handle "_No response_" as empty
+                if (value === '_No response_') value = '';
+                sections[key] = value;
+              }
+              return sections;
+            }
+
+            // Create slug from title
+            function slugify(text) {
+              return text
+                .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '');
+            }
+
+            // Extract image URL from markdown image or direct URL
+            function extractImageUrl(text) {
+              if (!text) return '';
+              // Match ![alt](url) or just URL
+              const imgMatch = text.match(/!\[.*?\]\((.*?)\)/);
+              if (imgMatch) return imgMatch[1];
+              const urlMatch = text.match(/(https?:\/\/[^\s]+)/);
+              if (urlMatch) return urlMatch[1];
+              return '';
+            }
+
+            const data = parseIssueBody(body);
+            const today = new Date().toISOString().split('T')[0];
+            const date = data.fecha || today;
+
+            let contentType, filename, content;
+
+            if (labels.includes('nuevo-articulo')) {
+              contentType = 'articulos';
+              const slug = slugify(data.titulo);
+              filename = `content/articulos/${date}-${slug}.md`;
+              const imageUrl = extractImageUrl(data.imagen_destacada);
+
+              content = `+++
+            title = "${data.titulo}"
+            description = "${data.descripcion?.replace(/"/g, '\\"') || ''}"
+            date = ${date}
+
+            [extra]
+            category = "${data.categoria}"
+            image = "${imageUrl}"
+            +++
+
+            ${data.contenido || ''}
+            `;
+            }
+
+            else if (labels.includes('nueva-investigacion')) {
+              contentType = 'investigacion';
+              const slug = slugify(data.titulo);
+              filename = `content/investigacion/${date}-${slug}.md`;
+
+              let extraFields = `category = "${data.tipo_de_publicacion}"
+            year = "${data.ano}"`;
+
+              if (data.coautores) {
+                extraFields += `\ncoauthors = "${data.coautores}"`;
+              }
+
+              let links = '';
+              if (data.enlace) {
+                links = `\n[[extra.links]]
+            name = "ResearchGate"
+            url = "${data.enlace}"`;
+              }
+
+              content = `+++
+            title = "${data.titulo}"
+            description = "${data.descripcion___abstract?.replace(/"/g, '\\"') || ''}"
+            date = ${date}
+
+            [extra]
+            ${extraFields}${links}
+            +++
+            `;
+            }
+
+            else if (labels.includes('nuevo-trabajo')) {
+              contentType = 'trabajos';
+              const slug = slugify(data.titulo);
+              filename = `content/trabajos/${date}-${slug}.md`;
+              const imageUrl = extractImageUrl(data.imagen_destacada);
+
+              content = `+++
+            title = "${data.titulo}"
+            description = "${data.descripcion?.replace(/"/g, '\\"') || ''}"
+            date = ${date}
+
+            [extra]
+            category = "${data.categoria}"
+            location = "${data.ubicacion}"
+            year = "${data.ano}"
+            image = "${imageUrl}"
+            +++
+
+            ${data.contenido || ''}
+            `;
+            }
+
+            else if (labels.includes('nueva-publicacion')) {
+              contentType = 'publicaciones';
+              const slug = slugify(data.titulo);
+              filename = `content/publicaciones/${date}-${slug}.md`;
+
+              content = `+++
+            title = "${data.titulo}"
+            description = "${data.descripcion?.replace(/"/g, '\\"') || ''}"
+            date = ${date}
+
+            [extra]
+            source = "${data.fuente}"
+            url = "${data.url}"
+            +++
+            `;
+            }
+
+            // Remove leading whitespace from each line (template literal indentation)
+            content = content.split('\n').map(line => line.replace(/^            /, '')).join('\n');
+
+            // Write file
+            const fs = require('fs');
+            fs.writeFileSync(filename, content);
+
+            console.log(`Created: ${filename}`);
+
+            // Set outputs for next steps
+            core.setOutput('filename', filename);
+            core.setOutput('title', data.titulo);
+            core.setOutput('content_type', contentType);
+
+      - name: Commit and push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add content/
+          git commit -m "feat: add new content from issue #${{ github.event.issue.number }}"
+          git push
+
+      - name: Close issue with comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `✅ **Contenido creado correctamente**\n\nEl contenido se ha publicado y estara disponible en la web en unos minutos.\n\nPuedes cerrar este issue.`
+            });
+
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed'
+            });

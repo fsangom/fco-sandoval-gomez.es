@@ -1,0 +1,73 @@
+name: "Nuevo Articulo"
+description: "Crear un nuevo articulo o reflexion"
+title: "[Articulo]: "
+labels: ["nuevo-articulo"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Nuevo Articulo
+        Rellena los campos para crear un nuevo articulo. Puedes arrastrar imagenes directamente en el campo de imagen.
+
+  - type: input
+    id: title
+    attributes:
+      label: Titulo
+      description: El titulo del articulo
+      placeholder: "Ej: Patrimonio rural y despoblacion"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripcion
+      description: Resumen breve del articulo (1-2 frases)
+      placeholder: "Ej: Reflexion sobre el impacto de la despoblacion en el patrimonio rural espanol"
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Fecha
+      description: Fecha de publicacion (AAAA-MM-DD). Dejar vacio para usar la fecha de hoy.
+      placeholder: "2025-01-15"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Categoria
+      description: Tipo de articulo
+      options:
+        - Patrimonio
+        - Reflexiones
+    validations:
+      required: true
+
+  - type: textarea
+    id: image
+    attributes:
+      label: Imagen destacada
+      description: Arrastra aqui la imagen o pega una URL. La imagen aparecera en la tarjeta del articulo.
+      placeholder: "Arrastra una imagen aqui..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: content
+    attributes:
+      label: Contenido
+      description: El contenido completo del articulo. Puedes usar Markdown (## para titulos, **negrita**, *cursiva*, etc.)
+      placeholder: |
+        ## Primera seccion
+
+        Escribe aqui el contenido...
+
+        ## Segunda seccion
+
+        Continua escribiendo...
+    validations:
+      required: false

@@ -1,0 +1,75 @@
+name: "Nueva Investigacion"
+description: "Crear una nueva publicacion academica o investigacion"
+title: "[Investigacion]: "
+labels: ["nueva-investigacion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Nueva Investigacion
+        Rellena los campos para anadir una publicacion academica.
+
+  - type: input
+    id: title
+    attributes:
+      label: Titulo
+      description: Titulo de la investigacion
+      placeholder: "Ej: Perspectivas del agua en la arquitectura"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripcion / Abstract
+      description: Resumen o abstract de la investigacion
+      placeholder: "Ej: Este articulo analiza el papel del agua en la arquitectura tradicional..."
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Fecha
+      description: Fecha de publicacion (AAAA-MM-DD). Dejar vacio para usar la fecha de hoy.
+      placeholder: "2025-01-15"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Tipo de publicacion
+      options:
+        - Article
+        - Book
+        - Conference Paper
+    validations:
+      required: true
+
+  - type: input
+    id: year
+    attributes:
+      label: Ano
+      description: Ano de publicacion o rango de anos del proyecto
+      placeholder: "2025 o 2020-2024"
+    validations:
+      required: true
+
+  - type: input
+    id: coauthors
+    attributes:
+      label: Coautores
+      description: Nombres de coautores separados por coma (opcional)
+      placeholder: "Juan Garcia, Maria Lopez"
+    validations:
+      required: false
+
+  - type: input
+    id: link_url
+    attributes:
+      label: Enlace
+      description: URL de ResearchGate u otro enlace a la publicacion (opcional)
+      placeholder: "https://www.researchgate.net/publication/..."
+    validations:
+      required: false

@@ -1,0 +1,91 @@
+name: "Nuevo Trabajo"
+description: "Crear un nuevo proyecto de arquitectura o conservacion"
+title: "[Trabajo]: "
+labels: ["nuevo-trabajo"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Nuevo Trabajo
+        Rellena los campos para anadir un proyecto. Puedes arrastrar imagenes directamente en el campo de imagen.
+
+  - type: input
+    id: title
+    attributes:
+      label: Titulo
+      description: Nombre del proyecto
+      placeholder: "Ej: Rehabilitacion Casa de la Virgen"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripcion
+      description: Descripcion breve del proyecto (1-2 frases)
+      placeholder: "Ej: Proyecto de rehabilitacion de una casa tradicional del siglo XVIII"
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Fecha
+      description: Fecha del proyecto (AAAA-MM-DD). Dejar vacio para usar la fecha de hoy.
+      placeholder: "2025-01-15"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Categoria
+      description: Tipo de proyecto
+      options:
+        - Rehabilitacion
+        - Investigacion
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Ubicacion
+      description: Ciudad y region del proyecto
+      placeholder: "Caravaca de la Cruz, Murcia"
+    validations:
+      required: true
+
+  - type: input
+    id: year
+    attributes:
+      label: Ano
+      description: Ano o rango de anos del proyecto
+      placeholder: "2025 o 2020-2024"
+    validations:
+      required: true
+
+  - type: textarea
+    id: image
+    attributes:
+      label: Imagen destacada
+      description: Arrastra aqui la imagen del proyecto o pega una URL.
+      placeholder: "Arrastra una imagen aqui..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: content
+    attributes:
+      label: Contenido
+      description: Descripcion detallada del proyecto. Puedes usar Markdown.
+      placeholder: |
+        ## Descripcion del proyecto
+
+        Escribe aqui la descripcion detallada...
+
+        ## Metodologia
+
+        Describe la metodologia empleada...
+    validations:
+      required: false
