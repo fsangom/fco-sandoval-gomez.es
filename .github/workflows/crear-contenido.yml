@@ -157,6 +157,10 @@ jobs:
               let extraFields = `category = "${data.tipo_de_publicacion}"
             year = "${data.ano}"`;
 
+              if (data.titulo_original) {
+                extraFields += `\noriginal_title = "${data.titulo_original}"`;
+              }
+
               if (data.coautores) {
                 extraFields += `\ncoauthors = "${data.coautores}"`;
               }
