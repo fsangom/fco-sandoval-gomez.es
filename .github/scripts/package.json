@@ -1,0 +1,12 @@
+{
+  "name": "content-creator-scripts",
+  "version": "1.0.0",
+  "description": "Scripts for creating content from GitHub issues",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

@@ -62,180 +62,20 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
+            const { createContent } = require('./.github/scripts/content-creator.js');
+            const fs = require('fs');
+
             const issue = context.payload.issue;
-            const body = issue.body;
             const labels = issue.labels.map(l => l.name);
 
-            // Parse issue body (GitHub forms format)
-            function parseIssueBody(body) {
-              const sections = {};
-              const regex = /### (.+?)\n\n([\s\S]*?)(?=\n### |\n*$)/g;
-              let match;
-              while ((match = regex.exec(body)) !== null) {
-                const key = match[1].trim().toLowerCase()
-                  .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-                  .replace(/[^a-z0-9]+/g, '_');
-                let value = match[2].trim();
-                // Handle "_No response_" as empty
-                if (value === '_No response_') value = '';
-                sections[key] = value;
-              }
-              return sections;
-            }
+            const result = createContent(issue.body, labels);
 
-            // Create slug from title
-            function slugify(text) {
-              return text
-                .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-                .toLowerCase()
-                .replace(/[^a-z0-9]+/g, '-')
-                .replace(/^-+|-+$/g, '');
-            }
+            fs.writeFileSync(result.filename, result.content);
+            console.log(`Created: ${result.filename}`);
 
-            // Extract image URL from markdown image or direct URL
-            function extractImageUrl(text) {
-              if (!text) return '';
-              // Match ![alt](url) format first
-              const imgMatch = text.match(/!\[.*?\]\((.*?)\)/);
-              if (imgMatch) return imgMatch[1].trim();
-              // Match plain URL, excluding trailing punctuation
-              const urlMatch = text.match(/(https?:\/\/[^\s"'<>]+)/);
-              if (urlMatch) return urlMatch[1].replace(/[)\]"']+$/, '').trim();
-              return '';
-            }
-
-            // Clean description: remove images, newlines, and escape quotes
-            function cleanDescription(text) {
-              if (!text) return '';
-              return text
-                .replace(/!\[.*?\]\(.*?\)/g, '')  // Remove markdown images
-                .replace(/\n+/g, ' ')              // Replace newlines with spaces
-                .replace(/\s+/g, ' ')              // Collapse multiple spaces
-                .replace(/"/g, '\\"')              // Escape quotes
-                .trim();
-            }
-
-            // Format date to YYYY-MM-DD with zero-padded month/day
-            function formatDate(dateStr) {
-              if (!dateStr) return null;
-              const parts = dateStr.trim().split('-');
-              if (parts.length !== 3) return null;
-              const [year, month, day] = parts;
-              return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
-            }
-
-            const data = parseIssueBody(body);
-            const today = new Date().toISOString().split('T')[0];
-            const date = formatDate(data.fecha) || today;
-
-            let contentType, filename, content;
-
-            if (labels.includes('nuevo-articulo')) {
-              contentType = 'articulos';
-              const slug = slugify(data.titulo);
-              filename = `content/articulos/${date}-${slug}.md`;
-              const imageUrl = extractImageUrl(data.imagen_destacada);
-
-              content = `+++
-            title = "${data.titulo}"
-            description = "${cleanDescription(data.descripcion)}"
-            date = ${date}
-
-            [extra]
-            category = "${data.categoria}"
-            image = "${imageUrl}"
-            +++
-
-            ${data.contenido || ''}
-            `;
-            }
-
-            else if (labels.includes('nueva-investigacion')) {
-              contentType = 'investigacion';
-              const slug = slugify(data.titulo);
-              filename = `content/investigacion/${date}-${slug}.md`;
-
-              let extraFields = `category = "${data.tipo_de_publicacion}"
-            year = "${data.ano}"`;
-
-              if (data.titulo_original) {
-                extraFields += `\noriginal_title = "${data.titulo_original}"`;
-              }
-
-              if (data.coautores) {
-                extraFields += `\ncoauthors = "${data.coautores}"`;
-              }
-
-              let links = '';
-              if (data.enlace) {
-                links = `\n[[extra.links]]
-            name = "ResearchGate"
-            url = "${data.enlace}"`;
-              }
-
-              content = `+++
-            title = "${data.titulo}"
-            description = "${cleanDescription(data.descripcion)}"
-            date = ${date}
-
-            [extra]
-            ${extraFields}${links}
-            +++
-            `;
-            }
-
-            else if (labels.includes('nuevo-trabajo')) {
-              contentType = 'trabajos';
-              const slug = slugify(data.titulo);
-              filename = `content/trabajos/${date}-${slug}.md`;
-              const imageUrl = extractImageUrl(data.imagen_destacada);
-
-              content = `+++
-            title = "${data.titulo}"
-            description = "${cleanDescription(data.descripcion)}"
-            date = ${date}
-
-            [extra]
-            category = "${data.categoria}"
-            location = "${data.ubicacion}"
-            year = "${data.ano}"
-            image = "${imageUrl}"
-            +++
-
-            ${data.contenido || ''}
-            `;
-            }
-
-            else if (labels.includes('nueva-publicacion')) {
-              contentType = 'publicaciones';
-              const slug = slugify(data.titulo);
-              filename = `content/publicaciones/${date}-${slug}.md`;
-
-              content = `+++
-            title = "${data.titulo}"
-            description = "${cleanDescription(data.descripcion)}"
-            date = ${date}
-
-            [extra]
-            source = "${data.fuente}"
-            url = "${data.url}"
-            +++
-            `;
-            }
-
-            // Remove leading whitespace from each line (template literal indentation)
-            content = content.split('\n').map(line => line.replace(/^            /, '')).join('\n');
-
-            // Write file
-            const fs = require('fs');
-            fs.writeFileSync(filename, content);
-
-            console.log(`Created: ${filename}`);
-
-            // Set outputs for next steps
-            core.setOutput('filename', filename);
-            core.setOutput('title', data.titulo);
-            core.setOutput('content_type', contentType);
+            core.setOutput('filename', result.filename);
+            core.setOutput('title', result.title);
+            core.setOutput('content_type', result.contentType);
 
       - name: Commit and push
         id: commit
