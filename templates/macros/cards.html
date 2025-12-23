@@ -134,8 +134,8 @@
             {% if item.extra.category %}
             <span class="category">{{ item.extra.category | upper }}</span>
             {% endif %}
-            {% if item.extra.year %}
-            <span class="date">{{ item.extra.year }}</span>
+            {% if item.date %}
+            <span class="date">{{ item.date | date(format="%B %Y") }}</span>
             {% endif %}
         </div>
         <h3>

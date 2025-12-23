@@ -8,5 +8,5 @@ year = "2025"
 coauthors = "Vincenzina La Spina, Sergio Manzano Fernández"
 [[extra.links]]
 name = "ResearchGate"
-url = "https://www.researchgate.net/profile/Francisco-Gomez-53"
+url = "https://www.researchgate.net/publication/395919976_Dynamics_of_Transformation_in_Earthen_Architecture_The_Case_of_the_Region_of_Northwest_Murcia_Spain"
 +++

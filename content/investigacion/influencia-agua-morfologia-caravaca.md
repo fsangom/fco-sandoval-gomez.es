@@ -8,5 +8,5 @@ year = "2019"
 coauthors = "Javier Martí Talavera, Marcos Ruiz Álvarez, Víctor Ruiz Álvarez"
 [[extra.links]]
 name = "ResearchGate"
-url = "https://www.researchgate.net/profile/Francisco-Gomez-53"
+url = "https://www.researchgate.net/publication/338843316_LA_INFLUENCIA_DEL_AGUA_EN_LA_MORFOLOGIA_URBANA_Y_ARQUITECTONICA_DE_CARAVACA_DE_LA_CRUZ_REGION_DE_MURCIA_SURESTE_DE_ESPANA"
 +++

@@ -8,5 +8,5 @@ year = "2020"
 coauthors = "Víctor Ruiz Álvarez, Javier Martí Talavera, Rubén Giménez García"
 [[extra.links]]
 name = "ResearchGate"
-url = "https://www.researchgate.net/profile/Francisco-Gomez-53"
+url = "https://www.researchgate.net/publication/348678849_Dinamicas_demograficas_en_el_nodo_inter-provincial_del_sureste_de_la_peninsula_iberica_iniciativas_y_propuestas_de_actuacion"
 +++

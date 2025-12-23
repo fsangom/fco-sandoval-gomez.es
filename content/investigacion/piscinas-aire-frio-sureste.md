@@ -8,5 +8,5 @@ year = "2018"
 coauthors = "David Espín Sánchez, Víctor Ruiz Álvarez, Marcos Ruiz Álvarez, José María Serna García"
 [[extra.links]]
 name = "ResearchGate"
-url = "https://www.researchgate.net/profile/Francisco-Gomez-53"
+url = "https://www.researchgate.net/publication/326024680_Caracteristicas_de_las_Piscinas_de_Aire_Frio_CAPs_en_el_interior_sureste_peninsular"
 +++

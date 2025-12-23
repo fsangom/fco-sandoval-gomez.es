@@ -8,5 +8,5 @@ year = "2025"
 coauthors = "David Eduardo Morocho Jaramillo, Camilla Mileto"
 [[extra.links]]
 name = "ResearchGate"
-url = "https://www.researchgate.net/profile/Francisco-Gomez-53"
+url = "https://www.researchgate.net/publication/395753333_Conflict_and_Transformation_Historic_Perspectives_of_Architectural_Heritage_in_Achuar_Communities_Ecuador"
 +++

@@ -8,5 +8,5 @@ year = "2020"
 coauthors = "Antonio Albardonedo Freire, Ana Patrícia Alho, Candela Bandres"
 [[extra.links]]
 name = "ResearchGate"
-url = "https://www.researchgate.net/profile/Francisco-Gomez-53"
+url = "https://www.researchgate.net/publication/340597530_Perspectivas_del_agua_Arquitectura_del_agua_y_territorio_en_la_epoca_moderna"
 +++

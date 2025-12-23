@@ -7,5 +7,5 @@ category = "Article"
 year = "2023"
 [[extra.links]]
 name = "ResearchGate"
-url = "https://www.researchgate.net/profile/Francisco-Gomez-53"
+url = "https://www.researchgate.net/publication/376783728_TERMINACIONES_CON_YESO_AL_JABONCILLO_APROXIMACION_A_UNA_TECNICA_CASI_EXTINTA"
 +++

@@ -8,5 +8,5 @@ year = "2021"
 coauthors = "Javier Martí Talavera, Víctor Ruiz Álvarez, Marcos Ruiz Álvarez"
 [[extra.links]]
 name = "ResearchGate"
-url = "https://www.researchgate.net/profile/Francisco-Gomez-53"
+url = "https://www.researchgate.net/publication/352283151_El_agua_en_la_estructura_de_la_ciudad_acequias_y_transformaciones_urbanas_en_Caravaca_de_la_Cruz"
 +++
