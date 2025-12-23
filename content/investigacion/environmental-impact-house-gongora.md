@@ -1,8 +1,9 @@
 +++
-title = "Approximation to the Environmental Impact of the House of Gongora, Cehegín (Murcia, Spain): an LCA Perspective"
-description = "This paper deals with an approximation to the environmental impacts of constructing the historic House of Góngora in Cehegín (Murcia), originally built in the 16th century using traditional earth architecture."
+title = "Aproximación al impacto ambiental de la Casa de Góngora, Cehegín (Murcia, España): una perspectiva ACV"
+description = "Este artículo aborda una aproximación a los impactos ambientales de la construcción de la histórica Casa de Góngora en Cehegín (Murcia), originalmente construida en el siglo XVI utilizando arquitectura tradicional de tierra."
 date = 2025-09-01
 [extra]
+original_title = "Approximation to the Environmental Impact of the House of Gongora, Cehegín (Murcia, Spain): an LCA Perspective"
 category = "Conference Paper"
 year = "2025"
 coauthors = "Alberto Quintana Gallardo, Vanesa Saez, Ignacio Guillen"

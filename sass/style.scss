@@ -13,7 +13,7 @@ $color-border: #e5e5e5;
 $font-serif: 'Libre Baskerville', Georgia, serif;
 $font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-$max-width: 1200px;
+$max-width: 1000px;
 $header-height: 80px;
 
 // Reset & Base
@@ -607,6 +607,13 @@ main {
                 }
             }
         }
+    }
+
+    &__original-title {
+        font-size: 0.85rem;
+        color: $color-text-light;
+        font-style: italic;
+        margin: 0.25rem 0 0.5rem 0;
     }
 
     &__coauthors {

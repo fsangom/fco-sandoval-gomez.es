@@ -148,6 +148,9 @@
             {{ item.title }}
             {% endif %}
         </h3>
+        {% if item.extra.original_title %}
+        <p class="investigacion-card__original-title">{{ item.extra.original_title }}</p>
+        {% endif %}
         {% if item.extra.coauthors %}
         <p class="investigacion-card__coauthors">Con: {{ item.extra.coauthors }}</p>
         {% endif %}
