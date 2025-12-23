@@ -114,9 +114,18 @@ jobs:
                 .trim();
             }
 
+            // Format date to YYYY-MM-DD with zero-padded month/day
+            function formatDate(dateStr) {
+              if (!dateStr) return null;
+              const parts = dateStr.trim().split('-');
+              if (parts.length !== 3) return null;
+              const [year, month, day] = parts;
+              return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+            }
+
             const data = parseIssueBody(body);
             const today = new Date().toISOString().split('T')[0];
-            const date = data.fecha || today;
+            const date = formatDate(data.fecha) || today;
 
             let contentType, filename, content;
 
