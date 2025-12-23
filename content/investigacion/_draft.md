@@ -32,8 +32,8 @@ date = 2025-01-01
 # Si no lo necesitas, borra o comenta esta linea con #
 # original_title = "Original title in English"
 
-# Tipo de publicacion. Opciones: "Article", "Book" o "Conference Paper"
-category = "Article"
+# Tipo de publicacion. Opciones: "Artículo", "Libro", "Capítulo de Libro" o "Ponencia"
+category = "Artículo"
 
 # Año de publicacion o rango de años del proyecto
 # Ejemplos: "2025" o "2020-2024"

@@ -4,7 +4,7 @@ description = "La construcción con tierra, extendida a lo largo del tiempo, con
 date = 2025-09-01
 [extra]
 original_title = "Dynamics of Transformation in Earthen Architecture: The Case of the Region of Northwest Murcia, Spain"
-category = "Conference Paper"
+category = "Ponencia"
 year = "2025"
 coauthors = "Vincenzina La Spina, Sergio Manzano Fernández"
 [[extra.links]]

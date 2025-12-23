@@ -4,7 +4,7 @@ description = "Esta contribución analiza los elementos arquitectónicos y las t
 date = 2025-09-01
 [extra]
 original_title = "Conflict and Transformation: Historic Perspectives of Architectural Heritage in Achuar Communities (Ecuador)"
-category = "Conference Paper"
+category = "Ponencia"
 year = "2025"
 coauthors = "David Eduardo Morocho Jaramillo, Camilla Mileto"
 [[extra.links]]

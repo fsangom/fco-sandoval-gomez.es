@@ -4,7 +4,7 @@ description = "Este artículo aborda una aproximación a los impactos ambientale
 date = 2025-09-01
 [extra]
 original_title = "Approximation to the Environmental Impact of the House of Gongora, Cehegín (Murcia, Spain): an LCA Perspective"
-category = "Conference Paper"
+category = "Ponencia"
 year = "2025"
 coauthors = "Alberto Quintana Gallardo, Vanesa Saez, Ignacio Guillen"
 [[extra.links]]

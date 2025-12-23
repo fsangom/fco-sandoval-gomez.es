@@ -1,0 +1,7 @@
+{# Spanish date formatting macros #}
+
+{# Format: "Febrero 2024" #}
+{% macro fecha_mes_ano(date) %}{% set m = date | date(format="%m") %}{% if m == "01" %}Enero{% elif m == "02" %}Febrero{% elif m == "03" %}Marzo{% elif m == "04" %}Abril{% elif m == "05" %}Mayo{% elif m == "06" %}Junio{% elif m == "07" %}Julio{% elif m == "08" %}Agosto{% elif m == "09" %}Septiembre{% elif m == "10" %}Octubre{% elif m == "11" %}Noviembre{% elif m == "12" %}Diciembre{% endif %} {{ date | date(format="%Y") }}{% endmacro %}
+
+{# Format: "29 de Febrero 2024" #}
+{% macro fecha_completa(date) %}{% set m = date | date(format="%m") %}{{ date | date(format="%d") }} de {% if m == "01" %}Enero{% elif m == "02" %}Febrero{% elif m == "03" %}Marzo{% elif m == "04" %}Abril{% elif m == "05" %}Mayo{% elif m == "06" %}Junio{% elif m == "07" %}Julio{% elif m == "08" %}Agosto{% elif m == "09" %}Septiembre{% elif m == "10" %}Octubre{% elif m == "11" %}Noviembre{% elif m == "12" %}Diciembre{% endif %} {{ date | date(format="%Y") }}{% endmacro %}

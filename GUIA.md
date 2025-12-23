@@ -64,7 +64,7 @@ Publicaciones academicas y trabajos de investigacion.
 | Titulo                 | Titulo de la investigacion                     | Si          |
 | Descripcion / Abstract | Resumen o abstract                             | Si          |
 | Fecha                  | Formato AAAA-MM-DD. Dejar vacio = fecha de hoy | No          |
-| Tipo de publicacion    | "Article", "Book" o "Conference Paper"         | Si          |
+| Tipo de publicacion    | "Artículo", "Libro", "Capítulo de Libro", "Ponencia" o "Conferencia" | Si          |
 | Ano                    | Ano o rango (ej: "2025" o "2020-2024")         | Si          |
 | Coautores              | Nombres separados por coma                     | No          |
 | Enlace                 | URL de ResearchGate u otra publicacion         | No          |

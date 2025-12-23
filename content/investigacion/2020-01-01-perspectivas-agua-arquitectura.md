@@ -3,7 +3,7 @@ title = "Perspectivas del agua. Arquitectura del agua y territorio en la época 
 description = "Libro sobre la arquitectura del agua y el territorio en la época moderna."
 date = 2020-01-01
 [extra]
-category = "Book"
+category = "Libro"
 year = "2020"
 coauthors = "Antonio Albardonedo Freire, Ana Patrícia Alho, Candela Bandres"
 [[extra.links]]

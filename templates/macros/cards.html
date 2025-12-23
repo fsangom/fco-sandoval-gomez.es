@@ -1,3 +1,5 @@
+{% import "macros/dates.html" as dates %}
+
 {# Blog post card - used in grids on homepage #}
 {% macro post_card(post) %}
 <article class="post-card">
@@ -78,7 +80,7 @@
                 {% if article.extra.category %}
                 <span class="category">{{ article.extra.category | upper }}</span>
                 {% endif %}
-                <span class="date">{{ article.date | date(format="%d %B %Y") }}</span>
+                <span class="date">{{ dates::fecha_completa(date=article.date) }}</span>
             </div>
             <h2>{{ article.title }}</h2>
             {% if article.description %}
@@ -107,7 +109,7 @@
                 {% if article.extra.category %}
                 <span class="category">{{ article.extra.category | upper }}</span>
                 {% endif %}
-                <span class="date">{{ article.date | date(format="%d %B %Y") }}</span>
+                <span class="date">{{ dates::fecha_completa(date=article.date) }}</span>
             </div>
             <h3>{{ article.title }}</h3>
             {% if article.description %}
@@ -155,7 +157,7 @@
             <span class="category">{{ item.extra.category | upper }}</span>
             {% endif %}
             {% if item.date %}
-            <span class="date">{{ item.date | date(format="%B %Y") }}</span>
+            <span class="date">{{ dates::fecha_mes_ano(date=item.date) }}</span>
             {% endif %}
         </div>
         <h3>
@@ -198,7 +200,7 @@
             <span class="category">{{ item.extra.source }}</span>
             {% endif %}
             {% if item.date %}
-            <span class="date">{{ item.date | date(format="%B %Y") }}</span>
+            <span class="date">{{ dates::fecha_mes_ano(date=item.date) }}</span>
             {% endif %}
         </div>
         <h3>{% if item.extra.url %}<a href="{{ item.extra.url }}" target="_blank" rel="noopener">{{ item.title }} <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>{% else %}{{ item.title }}{% endif %}</h3>

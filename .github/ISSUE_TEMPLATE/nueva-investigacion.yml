@@ -50,9 +50,11 @@ body:
     attributes:
       label: Tipo de publicación
       options:
-        - Article
-        - Book
-        - Conference Paper
+        - Artículo
+        - Libro
+        - Capítulo de Libro
+        - Ponencia
+        - Conferencia
     validations:
       required: true
 
