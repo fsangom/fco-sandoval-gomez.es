@@ -220,6 +220,18 @@ jobs:
           git commit -m "feat: add new content from issue #${{ github.event.issue.number }}"
           git push
 
+      - name: Trigger build workflow
+        if: steps.auth.outputs.authorized == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'main.yml',
+              ref: 'main'
+            });
+
       - name: Close issue with comment
         if: steps.auth.outputs.authorized == 'true'
         uses: actions/github-script@v7
