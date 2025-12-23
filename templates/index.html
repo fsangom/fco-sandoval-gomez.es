@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% import "macros/cards.html" as cards %}
+{% import "macros/sections.html" as sections %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-background">
+        <img src="{{ get_url(path='images/hero-bg.jpg') }}" alt="Arquitectura" loading="eager">
+    </div>
+    <div class="hero-content container">
+        <p class="hero-tagline">ARQUITECTURA · PATRIMONIO · REFLEXIÓN</p>
+        <h1>{{ config.description }}</h1>
+    </div>
+</section>
+
+<section class="articles-section">
+    <div class="container">
+        {{ sections::section_header(title="Artículos destacados", link_url=get_url(path='articulos'), link_text="Ver todos los artículos") }}
+        <div class="articles-grid">
+            {% set articulos = get_section(path="articulos/_index.md", metadata_only=true) %}
+            {% for article in articulos.pages | slice(end=4) %}
+                {{ cards::article_card(article=article, featured=loop.index == 1) }}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{{ sections::quote(text=config.extra.quote.text, author=config.extra.quote.author) }}
+
+<section class="trabajos-section">
+    <div class="container">
+        {{ sections::section_header(title="Trabajos recientes", link_url=get_url(path='trabajos'), link_text="Ver todos los trabajos") }}
+        <div class="posts-grid">
+            {% set trabajos = get_section(path="trabajos/_index.md", metadata_only=true) %}
+            {% for trabajo in trabajos.pages | slice(end=2) %}
+                {{ cards::post_card(post=trabajo) }}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% macro section_header(title, link_url, link_text) %}
+<div class="section-header">
+    <h2>{{ title }}</h2>
+    <a href="{{ link_url }}" class="view-all">{{ link_text }} <span class="arrow">→</span></a>
+</div>
+{% endmacro %}
+
+{% macro quote(text, author) %}
+<section class="quote-section">
+    <div class="container">
+        <blockquote>
+            <p>"{{ text }}"</p>
+            <cite>— {{ author }}</cite>
+        </blockquote>
+    </div>
+</section>
+{% endmacro %}
+
+{% macro page_header(title, description="") %}
+<section class="page-header">
+    <div class="container">
+        <h1>{{ title }}</h1>
+        {% if description %}
+        <p class="page-description">{{ description }}</p>
+        {% endif %}
+    </div>
+</section>
+{% endmacro %}
+
+{% macro page_header_styled(title, description="") %}
+<div class="page-header-styled">
+    <h1>{{ title }}</h1>
+    {% if description %}
+    <p class="page-description">{{ description }}</p>
+    {% endif %}
+</div>
+{% endmacro %}

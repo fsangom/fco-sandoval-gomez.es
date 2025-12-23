@@ -1,0 +1,16 @@
+<nav class="post-navigation">
+    <div class="container">
+        {% if page.earlier %}
+        <a href="{{ page.earlier.permalink }}" class="nav-prev">
+            <span class="nav-label">← Anterior</span>
+            <span class="nav-title">{{ page.earlier.title }}</span>
+        </a>
+        {% endif %}
+        {% if page.later %}
+        <a href="{{ page.later.permalink }}" class="nav-next">
+            <span class="nav-label">Siguiente →</span>
+            <span class="nav-title">{{ page.later.title }}</span>
+        </a>
+        {% endif %}
+    </div>
+</nav>

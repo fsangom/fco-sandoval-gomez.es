@@ -1,0 +1,30 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h3 class="footer-logo">Francisco Sandoval</h3>
+                <p>Arquitectura y conservación del patrimonio. La vida es energía: pura energía creativa.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>NAVEGACIÓN</h4>
+                <ul>
+                    <li><a href="{{ get_url(path='articulos') }}">Artículos</a></li>
+                    <li><a href="{{ get_url(path='trabajos') }}">Trabajos</a></li>
+                    <li><a href="{{ get_url(path='investigacion') }}">Investigación</a></li>
+                    <li><a href="{{ get_url(path='sobre-mi') }}">Sobre mí</a></li>
+                </ul>
+            </div>
+            {% set email = get_env(name="CONTACT_EMAIL", default="") %}
+            <div class="footer-contact">
+                <h4>CONTACTO</h4>
+                <ul>
+                    <li><a href="mailto:{{ email }}">{{ email }}</a></li>
+                    <li><a href="{{ config.extra.social.instagram }}" target="_blank" rel="noopener">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ now() | date(format="%Y") }} Francisco Sandoval. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>

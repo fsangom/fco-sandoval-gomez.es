@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% import "macros/cards.html" as cards %}
+{% import "macros/sections.html" as sections %}
+
+{% block title %}{{ section.title }} | Francisco Sandoval{% endblock %}
+
+{% block content %}
+{% set pages = paginator.pages | default(value=section.pages) %}
+
+{% if section.path is containing("articulos") %}
+{# Artículos: Featured article + grid #}
+<section class="articulos-page">
+    <div class="container">
+        {% if pages | length > 0 %}
+        {{ cards::article_featured(article=pages | first) }}
+        {% endif %}
+
+        {% if pages | length > 1 %}
+        <div class="articulos-grid">
+            {% for page in pages | slice(start=1) %}
+                {{ cards::article_card(article=page) }}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+{% elif section.path is containing("trabajos") %}
+{# Trabajos: 2-column grid with large images #}
+{{ sections::page_header(title=section.title, description=section.description | default(value="")) }}
+<section class="trabajos-page">
+    <div class="container">
+        <div class="trabajos-grid">
+            {% for page in pages %}
+                {{ cards::trabajo_card(trabajo=page) }}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% elif section.path is containing("investigacion") %}
+{# Investigación: Horizontal cards with external links #}
+<section class="investigacion-page">
+    <div class="container">
+        {{ sections::page_header_styled(title=section.title, description=section.description | default(value="")) }}
+        <div class="investigacion-list">
+            {% for page in pages %}
+                {{ cards::investigacion_card(item=page) }}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% elif section.path is containing("publicaciones") %}
+{# Publicaciones externas: Text-only list #}
+<section class="publicaciones-page">
+    <div class="container">
+        {{ sections::page_header_styled(title=section.title, description=section.description | default(value="")) }}
+        <div class="publicaciones-list">
+            {% for page in pages %}
+                {{ cards::publicacion_card(item=page) }}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% else %}
+{# Default: Generic grid #}
+{{ sections::page_header(title=section.title, description=section.description | default(value="")) }}
+<section class="content-section">
+    <div class="container">
+        <div class="posts-grid">
+            {% for page in pages %}
+                {{ cards::post_card(post=page) }}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{% if paginator %}
+<nav class="pagination">
+    <div class="container">
+        {% if paginator.previous %}
+        <a href="{{ paginator.previous }}" class="btn btn-primary">← Anterior</a>
+        {% endif %}
+        {% if paginator.next %}
+        <a href="{{ paginator.next }}" class="btn btn-primary">Siguiente →</a>
+        {% endif %}
+    </div>
+</nav>
+{% endif %}
+{% endblock %}

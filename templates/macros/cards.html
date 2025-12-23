@@ -1,0 +1,206 @@
+{# Blog post card - used in grids on homepage #}
+{% macro post_card(post) %}
+<article class="post-card">
+    <a href="{{ post.permalink }}">
+        {% if post.extra.image %}
+        <div class="post-image">
+            <img src="{{ get_url(path=post.extra.image) }}" alt="{{ post.title }}" loading="lazy">
+        </div>
+        {% endif %}
+        <div class="post-content">
+            <div class="post-meta">
+                {% if post.extra.category %}
+                <span class="category">{{ post.extra.category | upper }}</span>
+                {% endif %}
+                {% if post.date %}
+                <span class="date">{{ post.date | date(format="%d/%m/%Y") }}</span>
+                {% endif %}
+            </div>
+            <h3>{{ post.title }}</h3>
+            {% if post.description %}
+            <p>{{ post.description }}</p>
+            {% endif %}
+        </div>
+    </a>
+</article>
+{% endmacro %}
+
+{# Blog post card horizontal - used in list views #}
+{% macro post_card_horizontal(post) %}
+<article class="post-card post-card--horizontal">
+    <a href="{{ post.permalink }}">
+        {% if post.extra.image %}
+        <div class="post-image">
+            <img src="{{ get_url(path=post.extra.image) }}" alt="{{ post.title }}" loading="lazy">
+        </div>
+        {% endif %}
+        <div class="post-content">
+            <div class="post-meta">
+                {% if post.extra.category %}
+                <span class="category">{{ post.extra.category | upper }}</span>
+                {% endif %}
+                {% if post.date %}
+                <span class="date">{{ post.date | date(format="%d/%m/%Y") }}</span>
+                {% endif %}
+            </div>
+            <h3>{{ post.title }}</h3>
+            {% if post.description %}
+            <p>{{ post.description }}</p>
+            {% endif %}
+        </div>
+    </a>
+</article>
+{% endmacro %}
+
+{# Featured article card - larger card for articulos hero #}
+{% macro article_featured(article) %}
+<article class="article-featured">
+    <a href="{{ article.permalink }}">
+        {% if article.extra.image %}
+        <div class="article-featured__image">
+            <img src="{{ get_url(path=article.extra.image) }}" alt="{{ article.title }}" loading="lazy">
+        </div>
+        {% endif %}
+        <div class="article-featured__content">
+            <div class="post-meta">
+                {% if article.extra.category %}
+                <span class="category">{{ article.extra.category | upper }}</span>
+                {% endif %}
+                <span class="date">{{ article.date | date(format="%d %B %Y") }}</span>
+            </div>
+            <h2>{{ article.title }}</h2>
+            {% if article.description %}
+            <p>{{ article.description }}</p>
+            {% endif %}
+        </div>
+    </a>
+</article>
+{% endmacro %}
+
+{# Article card for grid below featured #}
+{% macro article_card(article) %}
+<article class="article-card">
+    <a href="{{ article.permalink }}">
+        {% if article.extra.image %}
+        <div class="article-card__image">
+            <img src="{{ get_url(path=article.extra.image) }}" alt="{{ article.title }}" loading="lazy">
+        </div>
+        {% endif %}
+        <div class="article-card__content">
+            <div class="post-meta">
+                {% if article.extra.category %}
+                <span class="category">{{ article.extra.category | upper }}</span>
+                {% endif %}
+                <span class="date">{{ article.date | date(format="%d %B %Y") }}</span>
+            </div>
+            <h3>{{ article.title }}</h3>
+            {% if article.description %}
+            <p>{{ article.description }}</p>
+            {% endif %}
+        </div>
+    </a>
+</article>
+{% endmacro %}
+
+{# Trabajo card - grid style with large image #}
+{% macro trabajo_card(trabajo) %}
+<article class="trabajo-card">
+    <a href="{{ trabajo.permalink }}">
+        {% if trabajo.extra.image %}
+        <div class="trabajo-card__image">
+            <img src="{{ get_url(path=trabajo.extra.image) }}" alt="{{ trabajo.title }}" loading="lazy">
+        </div>
+        {% endif %}
+        <div class="trabajo-card__content">
+            {% if trabajo.extra.category %}
+            <span class="category">{{ trabajo.extra.category | upper }}</span>
+            {% endif %}
+            <h3>{{ trabajo.title }}</h3>
+            <p class="trabajo-card__meta">
+                {% if trabajo.extra.location %}{{ trabajo.extra.location }}{% endif %}
+                {% if trabajo.extra.year %} · {{ trabajo.extra.year }}{% endif %}
+            </p>
+        </div>
+    </a>
+</article>
+{% endmacro %}
+
+{# Investigacion card - horizontal with external links #}
+{% macro investigacion_card(item) %}
+<article class="investigacion-card">
+    <a href="{{ item.permalink }}" class="investigacion-card__link">
+        {% if item.extra.image %}
+        <div class="investigacion-card__image">
+            <img src="{{ get_url(path=item.extra.image) }}" alt="{{ item.title }}" loading="lazy">
+        </div>
+        {% endif %}
+        <div class="investigacion-card__content">
+            <div class="post-meta">
+                {% if item.extra.category %}
+                <span class="category">{{ item.extra.category | upper }}</span>
+                {% endif %}
+                {% if item.extra.year %}
+                <span class="date">{{ item.extra.year }}</span>
+                {% endif %}
+            </div>
+            <h3>{{ item.title }}</h3>
+            {% if item.description %}
+            <p>{{ item.description }}</p>
+            {% endif %}
+        </div>
+    </a>
+    {% if item.extra.links %}
+    <div class="investigacion-card__links">
+        {% for link in item.extra.links %}
+        <a href="{{ link.url }}" target="_blank" rel="noopener" class="external-link">
+            {{ link.name }} <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+        </a>
+        {% endfor %}
+    </div>
+    {% endif %}
+</article>
+{% endmacro %}
+
+{# Publicacion externa card - text only list item #}
+{% macro publicacion_card(item) %}
+<article class="publicacion-card">
+    <div class="publicacion-card__content">
+        <div class="post-meta">
+            {% if item.extra.source %}
+            <span class="category">{{ item.extra.source }}</span>
+            {% endif %}
+            {% if item.date %}
+            <span class="date">{{ item.date | date(format="%B %Y") }}</span>
+            {% endif %}
+        </div>
+        <h3>{{ item.title }}</h3>
+        {% if item.description %}
+        <p>{{ item.description }}</p>
+        {% endif %}
+    </div>
+    {% if item.extra.url %}
+    <a href="{{ item.extra.url }}" target="_blank" rel="noopener" class="publicacion-card__link" aria-label="Ver publicación">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+    </a>
+    {% endif %}
+</article>
+{% endmacro %}
+
+{# Generic content card #}
+{% macro content_card(item) %}
+<article class="post-card">
+    <a href="{{ item.permalink }}">
+        {% if item.extra.image %}
+        <div class="post-image">
+            <img src="{{ get_url(path=item.extra.image) }}" alt="{{ item.title }}" loading="lazy">
+        </div>
+        {% endif %}
+        <div class="post-content">
+            <h3>{{ item.title }}</h3>
+            {% if item.description %}
+            <p>{{ item.description }}</p>
+            {% endif %}
+        </div>
+    </a>
+</article>
+{% endmacro %}

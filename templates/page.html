@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | Francisco Sandoval{% endblock %}
+
+{% block content %}
+<article class="article-page">
+    {% if page.extra.image %}
+    <div class="article-hero">
+        <img src="{{ get_url(path=page.extra.image) }}" alt="{{ page.title }}" loading="eager">
+    </div>
+    {% endif %}
+
+    <div class="container article-container">
+        <header class="article-header">
+            <div class="post-meta">
+                {% if page.extra.category %}
+                <span class="category">{{ page.extra.category | upper }}</span>
+                {% endif %}
+                {% if page.date %}
+                <span class="date">{{ page.date | date(format="%d/%m/%Y") }}</span>
+                {% endif %}
+            </div>
+            <h1>{{ page.title }}</h1>
+            {% if page.description %}
+            <p class="article-excerpt">{{ page.description }}</p>
+            {% endif %}
+            {% if page.extra.location or page.extra.year %}
+            <p class="article-location">
+                {% if page.extra.location %}{{ page.extra.location }}{% endif %}
+                {% if page.extra.year %} · {{ page.extra.year }}{% endif %}
+            </p>
+            {% endif %}
+        </header>
+
+        <div class="article-body prose">
+            {{ page.content | safe }}
+        </div>
+
+        {% if page.extra.gallery %}
+        <div class="article-gallery">
+            {% for image in page.extra.gallery %}
+            <figure>
+                <img src="{{ get_url(path=image.src) }}" alt="{{ image.alt | default(value='') }}" loading="lazy">
+                {% if image.caption %}
+                <figcaption>{{ image.caption }}</figcaption>
+                {% endif %}
+            </figure>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</article>
+
+{% include "partials/post-navigation.html" %}
+{% endblock %}
