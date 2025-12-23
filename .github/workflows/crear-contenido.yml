@@ -103,6 +103,17 @@ jobs:
               return '';
             }
 
+            // Clean description: remove images, newlines, and escape quotes
+            function cleanDescription(text) {
+              if (!text) return '';
+              return text
+                .replace(/!\[.*?\]\(.*?\)/g, '')  // Remove markdown images
+                .replace(/\n+/g, ' ')              // Replace newlines with spaces
+                .replace(/\s+/g, ' ')              // Collapse multiple spaces
+                .replace(/"/g, '\\"')              // Escape quotes
+                .trim();
+            }
+
             const data = parseIssueBody(body);
             const today = new Date().toISOString().split('T')[0];
             const date = data.fecha || today;
@@ -117,7 +128,7 @@ jobs:
 
               content = `+++
             title = "${data.titulo}"
-            description = "${data.descripcion?.replace(/"/g, '\\"') || ''}"
+            description = "${cleanDescription(data.descripcion)}"
             date = ${date}
 
             [extra]
@@ -150,7 +161,7 @@ jobs:
 
               content = `+++
             title = "${data.titulo}"
-            description = "${data.descripcion___abstract?.replace(/"/g, '\\"') || ''}"
+            description = "${cleanDescription(data.descripcion___abstract)}"
             date = ${date}
 
             [extra]
@@ -167,7 +178,7 @@ jobs:
 
               content = `+++
             title = "${data.titulo}"
-            description = "${data.descripcion?.replace(/"/g, '\\"') || ''}"
+            description = "${cleanDescription(data.descripcion)}"
             date = ${date}
 
             [extra]
@@ -188,7 +199,7 @@ jobs:
 
               content = `+++
             title = "${data.titulo}"
-            description = "${data.descripcion?.replace(/"/g, '\\"') || ''}"
+            description = "${cleanDescription(data.descripcion)}"
             date = ${date}
 
             [extra]
