@@ -1,0 +1,8 @@
++++
+title = "Patrimonio amenazado en Caravaca"
+description = "Los vínculos con nuestra historia se manifiestan a través del patrimonio, que en ocasiones se encuentra en situación de riesgo."
+date = 2017-06-24
+[extra]
+source = "El Noroeste Digital"
+url = "https://elnoroestedigital.com/patrimonio-amenazado-en-caravaca-2/"
++++

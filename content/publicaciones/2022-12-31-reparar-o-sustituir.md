@@ -1,0 +1,8 @@
++++
+title = "Reparar o sustituir"
+description = "Cuentan que allá por la Antigüedad navegaba un barco que planteaba una interesante paradoja sobre la identidad y la conservación."
+date = 2022-12-31
+[extra]
+source = "El Noroeste Digital"
+url = "https://elnoroestedigital.com/reparar-o-sustituir/"
++++

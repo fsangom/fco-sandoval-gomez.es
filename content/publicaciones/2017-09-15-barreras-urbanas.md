@@ -1,0 +1,8 @@
++++
+title = "Acerca de las barreras urbanas"
+description = "En los últimos días muchos municipios han comenzado a colocar elementos de protección que transforman el espacio público."
+date = 2017-09-15
+[extra]
+source = "El Noroeste Digital"
+url = "https://elnoroestedigital.com/acerca-de-las-barreras-urbanas-2/"
++++
