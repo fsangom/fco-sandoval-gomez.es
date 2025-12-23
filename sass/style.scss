@@ -569,7 +569,7 @@ main {
 }
 
 .investigacion-card {
-    padding: 2.5rem 0;
+    padding: 2rem 0;
     border-bottom: 1px solid $color-border;
 
     &:first-child {
@@ -581,55 +581,46 @@ main {
         padding-bottom: 0;
     }
 
-    &__link {
-        display: grid;
-        grid-template-columns: 220px 1fr;
-        gap: 2rem;
-        align-items: start;
-    }
-
-    &__image {
-        overflow: hidden;
-        border-radius: 4px;
-        aspect-ratio: 1/1;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s;
-        }
-    }
-
-    &:hover &__image img {
-        transform: scale(1.03);
-    }
-
     &__content {
         .post-meta {
             margin-bottom: 0.5rem;
         }
 
         h3 {
-            font-size: 1.35rem;
+            font-size: 1.25rem;
             color: $color-primary;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             line-height: 1.4;
-        }
 
-        p {
-            font-size: 0.95rem;
-            color: $color-text-light;
-            line-height: 1.6;
-            margin: 0;
+            a {
+                display: inline;
+
+                svg {
+                    vertical-align: middle;
+                    margin-left: 0.35rem;
+                    opacity: 0.6;
+                    transition: opacity 0.2s;
+                }
+
+                &:hover svg {
+                    opacity: 1;
+                }
+            }
         }
     }
 
-    &__links {
-        margin-top: 1rem;
-        padding-left: calc(220px + 2rem);
-        display: flex;
-        gap: 1.5rem;
+    &__coauthors {
+        font-size: 0.85rem;
+        color: $color-text-light;
+        font-style: italic;
+        margin: 0 0 0.75rem 0;
+    }
+
+    &__description {
+        font-size: 0.95rem;
+        color: $color-text;
+        line-height: 1.6;
+        margin: 0;
     }
 }
 
@@ -1226,14 +1217,6 @@ blockquote {
 
     .trabajos-grid {
         grid-template-columns: 1fr;
-    }
-
-    .investigacion-card__link {
-        grid-template-columns: 1fr;
-    }
-
-    .investigacion-card__links {
-        padding-left: 0;
     }
 
     .posts-grid {
