@@ -1,6 +1,6 @@
 +++
 title = "Ejemplo titulo"
-description = ""
+description = "updating the desc"
 date = 2140-06-15
 
 [extra]
