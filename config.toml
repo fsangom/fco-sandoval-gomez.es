@@ -23,6 +23,7 @@ highlight_theme = "css"
 [extra]
 author = "Francisco Sandoval"
 email = "frc.sandoval@gmail.com"
+cronitor_client_key = "299c6b61f66b9f19704ce7808a379e72"
 
 # Social links
 [extra.social]
