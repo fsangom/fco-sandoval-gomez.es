@@ -18,7 +18,7 @@
     <div class="container">
         {{ sections::section_header(title="Artículos destacados", link_url=get_url(path='articulos'), link_text="Ver todos los artículos") }}
         <div class="articles-grid">
-            {% set articulos = get_section(path="articulos/_index.md", metadata_only=true) %}
+            {% set articulos = get_section(path="articulos/_index.md") %}
             {% for article in articulos.pages | slice(end=4) %}
                 {{ cards::article_card(article=article, featured=loop.index == 1) }}
             {% endfor %}
@@ -32,7 +32,7 @@
     <div class="container">
         {{ sections::section_header(title="Trabajos recientes", link_url=get_url(path='trabajos'), link_text="Ver todos los trabajos") }}
         <div class="posts-grid">
-            {% set trabajos = get_section(path="trabajos/_index.md", metadata_only=true) %}
+            {% set trabajos = get_section(path="trabajos/_index.md") %}
             {% for trabajo in trabajos.pages | slice(end=2) %}
                 {{ cards::post_card(post=trabajo) }}
             {% endfor %}
