@@ -170,7 +170,7 @@ jobs:
 
               content = `+++
             title = "${data.titulo}"
-            description = "${cleanDescription(data.descripcion___abstract)}"
+            description = "${cleanDescription(data.descripcion_abstract)}"
             date = ${date}
 
             [extra]
