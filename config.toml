@@ -1,0 +1,35 @@
+# Site configuration
+base_url = "https://fco-sandoval-gomez.es"
+title = "Francisco Sandoval"
+description = "Arquitectura y conservación del patrimonio, abordadas desde los conceptos, la reflexión y la vida cotidiana."
+default_language = "es"
+
+# Compile Sass files in the sass directory
+compile_sass = true
+
+# Search index
+build_search_index = false
+
+# Slugify settings
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+
+[markdown]
+highlight_code = true
+highlight_theme = "css"
+
+[extra]
+author = "Francisco Sandoval"
+# email is set via CONTACT_EMAIL environment variable (use get_env in templates)
+
+# Social links
+[extra.social]
+instagram = "https://instagram.com/mr.dovale"
+linkedin = "https://www.linkedin.com/in/francisco-sandoval-gomez-arq/"
+
+# Quote for homepage
+[extra.quote]
+text = "La arquitectura es el testigo insobornable de la historia, porque no se puede hablar de un gran edificio sin reconocer en él el testigo de una época, su cultura, su sociedad, sus intenciones..."
+author = "Octavio Paz"
