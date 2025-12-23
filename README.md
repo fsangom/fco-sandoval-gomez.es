@@ -24,23 +24,15 @@ cd fco-sandoval-gomez.es
 
 2. Run the development server:
 ```bash
-CONTACT_EMAIL=your-email@example.com zola serve
+zola serve
 ```
 
 Open http://127.0.0.1:1111/ in your browser.
 
-### Environment Variables
-
-| Variable        | Description                                |
-|-----------------|--------------------------------------------|
-| `CONTACT_EMAIL` | Email displayed on contact page and footer |
-
-For Netlify deployment, set this variable in **Site settings > Environment variables**.
-
 ### Build
 
 ```bash
-CONTACT_EMAIL=your-email@example.com zola build
+zola build
 ```
 
 The static site will be generated in the `public/` directory.

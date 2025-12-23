@@ -22,7 +22,7 @@ highlight_theme = "css"
 
 [extra]
 author = "Francisco Sandoval"
-# email is set via CONTACT_EMAIL environment variable (use get_env in templates)
+email = "frc.sandoval@gmail.com"
 
 # Social links
 [extra.social]

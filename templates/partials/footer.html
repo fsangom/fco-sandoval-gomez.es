@@ -14,11 +14,10 @@
                     <li><a href="{{ get_url(path='sobre-mi') }}">Sobre mí</a></li>
                 </ul>
             </div>
-            {% set email = get_env(name="CONTACT_EMAIL", default="") %}
             <div class="footer-contact">
                 <h4>CONTACTO</h4>
                 <ul>
-                    <li><a href="mailto:{{ email }}">{{ email }}</a></li>
+                    <li><a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a></li>
                     <li><a href="{{ config.extra.social.instagram }}" target="_blank" rel="noopener">Instagram</a></li>
                 </ul>
             </div>
