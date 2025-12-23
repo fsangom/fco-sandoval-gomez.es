@@ -1,7 +1,7 @@
 # Site configuration
 base_url = "https://fco-sandoval-gomez.es"
 title = "Francisco Sandoval Gómez"
-description = "Arquitectura y conservación del patrimonio, abordadas desde los conceptos, la reflexión y la vida cotidiana."
+description = "Arquitectura y conservación del patrimonio. La vida es energía: pura energía creativa."
 default_language = "es"
 
 # Compile Sass files in the sass directory
