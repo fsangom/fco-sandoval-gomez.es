@@ -6,7 +6,13 @@ description = "Francisco Sandoval Gómez es arquitecto especializado en conserva
 
 ## Posición actual
 
-Investigador en la Universitat Politècnica de València (Valencia, España)
+<div class="position-card">
+    <img src="/images/upv-logo.png" alt="Universitat Politècnica de València" class="position-logo">
+    <div class="position-info">
+        <p>Investigador en la <strong>Universitat Politècnica de València</strong></p>
+        <p class="position-location">Valencia, España</p>
+    </div>
+</div>
 
 ## Formación
 

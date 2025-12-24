@@ -548,6 +548,53 @@ main {
     }
 }
 
+.position-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: $color-bg;
+    border: 1px solid $color-border;
+    border-radius: 12px;
+    margin: 1rem 0 2rem;
+}
+
+.position-logo {
+    width: 80px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.position-info {
+    p {
+        margin: 0;
+        color: $color-text;
+        line-height: 1.5;
+
+        strong {
+            color: $color-primary;
+        }
+    }
+
+    .position-location {
+        font-size: 0.9rem;
+        color: $color-text-light;
+        margin-top: 0.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .position-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .position-logo {
+        width: 60px;
+    }
+}
+
 .trabajos-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
