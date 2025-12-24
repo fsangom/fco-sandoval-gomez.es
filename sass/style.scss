@@ -557,6 +557,41 @@ main {
     flex: 1;
 }
 
+.intro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-family: $font-sans;
+    white-space: nowrap;
+    margin-top: 0.5rem;
+}
+
+.lang-current {
+    font-weight: 600;
+    color: $color-primary;
+}
+
+.lang-divider {
+    color: $color-text-light;
+}
+
+.lang-link {
+    color: $color-text-light;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-accent;
+    }
+}
+
 .sobre-mi-avatar {
     flex-shrink: 0;
     order: 1;

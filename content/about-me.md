@@ -1,44 +1,44 @@
 +++
-title = "Sobre mí"
+title = "About me"
 template = "sobre-mi.html"
-description = "Francisco Sandoval Gómez es arquitecto especializado en conservación del patrimonio arquitectónico. El criterio de su trabajo se orienta hacia la valorización de las técnicas tradicionales y el empleo de materiales sostenibles en las intervenciones arquitectónicas. Desarrolla en la Universitat Politècnica de València la línea de investigación de la conservación, restauración y reutilización adaptativa del patrimonio arquitectónico construido con tierra y su comportamiento climático mediante el método de análisis de ciclo de vida del edificio para mejorar el ahorro energético y su balance ambiental."
+description = "Francisco Sandoval Gómez is an architect specialized in architectural heritage conservation. His work focuses on the valorization of traditional techniques and the use of sustainable materials in architectural interventions. At the Universitat Politècnica de València, he develops research on conservation, restoration, and adaptive reuse of earthen architectural heritage and its climatic behavior through life cycle assessment methods to improve energy savings and environmental balance."
 
 [extra]
-lang = "es"
-alternate_lang = "en"
-alternate_url = "/about-me"
+lang = "en"
+alternate_lang = "es"
+alternate_url = "/sobre-mi"
 +++
 
-## Posición actual
+## Current Position
 
 <div class="position-card">
     <img src="/images/upv-logo.png" alt="Universitat Politècnica de València" class="position-logo">
     <div class="position-info">
-        <p>Investigador en el <strong>Centro PEGASO</strong>: Arquitectura, Patrimonio y Gestión para el Desarrollo Sostenible</p>
-        <p class="position-location">Universitat Politècnica de València · España</p>
+        <p>Researcher at <strong>PEGASO Center</strong>: Architecture, Heritage and Management for Sustainable Development</p>
+        <p class="position-location">Universitat Politècnica de València · Spain</p>
     </div>
 </div>
 
-## Formación
+## Education
 
 <div class="education-list">
     <div class="education-card">
         <img src="/images/upv-logo.png" alt="UPV" class="education-logo">
         <div class="education-info">
-            <span class="education-degree">Máster en Conservación del Patrimonio Arquitectónico</span>
-            <span class="education-university">Universitat Politècnica de València · España</span>
+            <span class="education-degree">Master's in Architectural Heritage Conservation</span>
+            <span class="education-university">Universitat Politècnica de València · Spain</span>
         </div>
     </div>
     <div class="education-card">
         <img src="/images/upc-logo.png" alt="UPC" class="education-logo">
         <div class="education-info">
-            <span class="education-degree">Arquitecto</span>
-            <span class="education-university">Universidad Politécnica de Cartagena · España</span>
+            <span class="education-degree">Architect</span>
+            <span class="education-university">Universidad Politécnica de Cartagena · Spain</span>
         </div>
     </div>
 </div>
 
-## Contacto
+## Contact
 
 <div class="contact-section">
     <a href="mailto:frc.sandoval@gmail.com" class="contact-card contact-card--primary">
@@ -49,14 +49,14 @@ alternate_url = "/about-me"
             </svg>
         </div>
         <div class="contact-details">
-            <span class="contact-label">Correo electrónico</span>
+            <span class="contact-label">Email</span>
             <span class="contact-value">frc.sandoval@gmail.com</span>
-            <span class="contact-cta">Enviar mensaje <span class="arrow">→</span></span>
+            <span class="contact-cta">Send message <span class="arrow">→</span></span>
         </div>
     </a>
 </div>
 
-## Enlaces
+## Links
 
 <div class="links-grid">
     <a href="https://www.researchgate.net/profile/Francisco-Gomez-53" target="_blank" rel="noopener" class="link-card">
@@ -65,9 +65,9 @@ alternate_url = "/about-me"
         </div>
         <div class="link-info">
             <span class="link-name">ResearchGate</span>
-            <span class="link-desc">Perfil académico y publicaciones</span>
+            <span class="link-desc">Academic profile and publications</span>
         </div>
-        <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+        <svg class="link-arrow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
     </a>
     <a href="https://www.linkedin.com/in/francisco-sandoval-gomez-arq/" target="_blank" rel="noopener" class="link-card">
         <div class="link-icon">
@@ -75,9 +75,9 @@ alternate_url = "/about-me"
         </div>
         <div class="link-info">
             <span class="link-name">LinkedIn</span>
-            <span class="link-desc">Perfil profesional</span>
+            <span class="link-desc">Professional profile</span>
         </div>
-        <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+        <svg class="link-arrow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
     </a>
     <a href="https://www.instagram.com/mr.dovale" target="_blank" rel="noopener" class="link-card">
         <div class="link-icon">
@@ -87,6 +87,6 @@ alternate_url = "/about-me"
             <span class="link-name">Instagram</span>
             <span class="link-desc">@mr.dovale</span>
         </div>
-        <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+        <svg class="link-arrow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
     </a>
 </div>
