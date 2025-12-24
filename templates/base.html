@@ -6,9 +6,11 @@
     {% block head %}{% endblock %}
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
     {% include "partials/header.html" %}
 
-    <main>
+    <main id="main-content">
         {% block content %}{% endblock %}
     </main>
 
@@ -19,9 +21,14 @@
     {% include "partials/footer.html" %}
 
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.main-nav').classList.toggle('active');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        menuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
             this.classList.toggle('active');
+            const expanded = mainNav.classList.contains('active');
+            this.setAttribute('aria-expanded', expanded);
         });
     </script>
 </body>

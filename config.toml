@@ -7,6 +7,9 @@ default_language = "es"
 # Compile Sass files in the sass directory
 compile_sass = true
 
+# Minify HTML output for better performance
+minify_html = true
+
 # Search index
 build_search_index = false
 

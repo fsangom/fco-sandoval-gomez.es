@@ -3,7 +3,7 @@
         <a href="{{ get_url(path='/') }}" class="logo">
             <img src="{{ get_url(path='images/sando-navbar.jpg') }}" alt="Francisco Sandoval Gómez" class="logo-photo">
         </a>
-        <nav class="main-nav">
+        <nav id="main-nav" class="main-nav">
             <ul>
                 <li><a href="{{ get_url(path='articulos') }}" {% if current_path is starting_with("/articulos") %}class="active"{% endif %}>Artículos</a></li>
                 <li><a href="{{ get_url(path='trabajos') }}" {% if current_path is starting_with("/trabajos") %}class="active"{% endif %}>Trabajos</a></li>
@@ -12,7 +12,7 @@
                 <li><a href="{{ get_url(path='sobre-mi') }}" {% if current_path is starting_with("/sobre-mi") or current_path is starting_with("/contacto") %}class="active"{% endif %}>Sobre mí</a></li>
             </ul>
         </nav>
-        <button class="menu-toggle" aria-label="Menú">
+        <button class="menu-toggle" aria-label="Menú" aria-expanded="false" aria-controls="main-nav">
             <span></span>
             <span></span>
             <span></span>
