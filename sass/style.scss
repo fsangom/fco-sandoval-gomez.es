@@ -588,7 +588,7 @@ main {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .position-card {
         flex-direction: column;
         text-align: center;
@@ -596,7 +596,9 @@ main {
     }
 
     .position-logo {
-        width: 100px;
+        width: auto;
+        height: auto;
+        min-height: 100px;
         margin-bottom: 0;
     }
 }
