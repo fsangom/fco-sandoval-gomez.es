@@ -21,6 +21,7 @@
                 <a href="/it/{{ path }}" {% if lang == "it" %}class="active"{% endif %}>IT</a>
             </div>
         </nav>
+        {% include "partials/search.html" %}
         <div class="lang-nav lang-nav--desktop">
             <a href="/{{ path }}" {% if not lang or lang == "es" %}class="active"{% endif %}>ES</a>
             <a href="/en/{{ path }}" {% if lang == "en" %}class="active"{% endif %}>EN</a>

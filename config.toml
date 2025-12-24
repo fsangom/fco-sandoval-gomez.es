@@ -11,7 +11,12 @@ compile_sass = true
 minify_html = true
 
 # Search index
-build_search_index = false
+build_search_index = true
+
+[search]
+include_title = true
+include_description = true
+include_content = false
 
 # Generate sitemap
 generate_feeds = true
@@ -33,12 +38,14 @@ title = "Francisco Sandoval Gómez"
 description = "Architecture and heritage conservation. Life is energy: pure creative energy."
 generate_feeds = true
 feed_filenames = ["atom.xml"]
+build_search_index = true
 
 [languages.it]
 title = "Francisco Sandoval Gómez"
 description = "Architettura e conservazione del patrimonio. La vita è energia: pura energia creativa."
 generate_feeds = true
 feed_filenames = ["atom.xml"]
+build_search_index = true
 
 [extra]
 author = "Francisco Sandoval Gómez"
@@ -74,6 +81,8 @@ footer_rights = "Todos los derechos reservados."
 footer_nav = "NAVEGACIÓN"
 footer_contact = "CONTACTO"
 footer_dev = "Desarrollado por"
+search_placeholder = "Buscar..."
+search_no_results = "No se encontraron resultados"
 
 [extra.i18n.en]
 nav_articulos = "Articles"
@@ -92,6 +101,8 @@ footer_rights = "All rights reserved."
 footer_nav = "NAVIGATION"
 footer_contact = "CONTACT"
 footer_dev = "Developed by"
+search_placeholder = "Search..."
+search_no_results = "No results found"
 
 [extra.i18n.it]
 nav_articulos = "Articoli"
@@ -110,3 +121,5 @@ footer_rights = "Tutti i diritti riservati."
 footer_nav = "NAVIGAZIONE"
 footer_contact = "CONTATTO"
 footer_dev = "Sviluppato da"
+search_placeholder = "Cerca..."
+search_no_results = "Nessun risultato trovato"

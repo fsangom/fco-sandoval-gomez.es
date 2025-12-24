@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#2c4a6e">
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 
 {# Favicon #}
 <link rel="icon" type="image/x-icon" href="{{ get_url(path='images/sando-navbar.ico') }}">
@@ -64,6 +64,9 @@
 
 {# Stylesheet #}
 <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+
+{# Search Script #}
+<script defer src="{{ get_url(path='js/search.js') }}"></script>
 
 {# RSS Feed #}
 <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path='atom.xml') }}">
