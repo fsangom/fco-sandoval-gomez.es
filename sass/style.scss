@@ -1769,3 +1769,105 @@ blockquote {
         gap: 1rem;
     }
 }
+
+// 404 Error Page
+.error-page {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.error-content {
+    h1 {
+        font-size: 6rem;
+        color: $color-primary;
+        margin-bottom: 0;
+        line-height: 1;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        color: $color-text;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: $color-text-light;
+        margin-bottom: 2rem;
+    }
+}
+
+.error-actions {
+    margin-bottom: 2rem;
+}
+
+.error-links {
+    p {
+        font-size: 0.9rem;
+        color: $color-text-light;
+        margin-bottom: 0.5rem;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    a {
+        color: $color-primary;
+        text-decoration: underline;
+
+        &:hover {
+            color: $color-accent;
+        }
+    }
+}
+
+// Print Stylesheet
+@media print {
+    .site-header,
+    .site-footer,
+    .cta-section,
+    .pagination,
+    .skip-link,
+    .menu-toggle {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: white;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    .prose a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+}

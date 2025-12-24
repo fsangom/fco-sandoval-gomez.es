@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Página no encontrada | Francisco Sandoval Gómez{% endblock %}
+
+{% block content %}
+<section class="error-page">
+    <div class="container">
+        <div class="error-content">
+            <h1>404</h1>
+            <h2>Página no encontrada</h2>
+            <p>Lo sentimos, la página que buscas no existe o ha sido movida.</p>
+            <div class="error-actions">
+                <a href="{{ get_url(path='/') }}" class="btn btn-primary">Volver al inicio</a>
+            </div>
+            <div class="error-links">
+                <p>Quizás te interese:</p>
+                <ul>
+                    <li><a href="{{ get_url(path='articulos') }}">Artículos</a></li>
+                    <li><a href="{{ get_url(path='trabajos') }}">Trabajos</a></li>
+                    <li><a href="{{ get_url(path='investigacion') }}">Investigación</a></li>
+                    <li><a href="{{ get_url(path='sobre-mi') }}">Sobre mí</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block cta %}{% endblock %}
