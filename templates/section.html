@@ -79,15 +79,38 @@
 </section>
 {% endif %}
 
-{% if paginator %}
+{% if paginator and paginator.number_pagers > 1 %}
 <nav class="pagination">
     <div class="container">
-        {% if paginator.previous %}
-        <a href="{{ paginator.previous }}" class="btn btn-primary">← Anterior</a>
-        {% endif %}
-        {% if paginator.next %}
-        <a href="{{ paginator.next }}" class="btn btn-primary">Siguiente →</a>
-        {% endif %}
+        <div class="pagination-inner">
+            {% if paginator.previous %}
+            <a href="{{ paginator.previous }}" class="pagination-btn pagination-btn--prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                <span>Anterior</span>
+            </a>
+            {% else %}
+            <span class="pagination-btn pagination-btn--prev pagination-btn--disabled">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                <span>Anterior</span>
+            </span>
+            {% endif %}
+
+            <span class="pagination-info">
+                Página {{ paginator.current_index }} de {{ paginator.number_pagers }}
+            </span>
+
+            {% if paginator.next %}
+            <a href="{{ paginator.next }}" class="pagination-btn pagination-btn--next">
+                <span>Siguiente</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+            {% else %}
+            <span class="pagination-btn pagination-btn--next pagination-btn--disabled">
+                <span>Siguiente</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </span>
+            {% endif %}
+        </div>
     </div>
 </nav>
 {% endif %}
