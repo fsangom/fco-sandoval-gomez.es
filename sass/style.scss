@@ -226,6 +226,16 @@ h3 { font-size: 1.5rem; }
             background: $color-primary;
         }
     }
+
+    // Desktop: show only desktop lang-nav
+    &--desktop {
+        display: flex;
+    }
+
+    // Mobile: hide by default, show inside menu
+    &--mobile {
+        display: none;
+    }
 }
 
 // Main content offset for fixed header
@@ -628,7 +638,7 @@ main {
     img {
         width: auto;
         height: auto;
-        max-height: 280px;
+        max-height: 400px;
         object-fit: cover;
         border-radius: 8px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -758,13 +768,21 @@ main {
     }
 
     .education-logo {
-        width: 100px;
+        width: 120px;
         height: auto;
-        min-height: 100px;
+        min-height: 110px;
     }
 
     .education-degree {
         margin-top: -50px;
+    }
+
+    .position-card .position-info h4 {
+        font-size: 0.95rem;
+    }
+
+    .position-card .position-info p {
+        font-size: 0.85rem;
     }
 
     .link-icon {
@@ -1322,7 +1340,12 @@ blockquote {
     margin-bottom: 1.5rem;
 }
 
-.footer-nav ul,
+.footer-nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem 1.5rem;
+}
+
 .footer-contact ul {
     display: flex;
     flex-direction: column;
@@ -1338,6 +1361,16 @@ blockquote {
     &:hover {
         color: $color-accent;
     }
+}
+
+.email-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.email-icon {
+    flex-shrink: 0;
 }
 
 .footer-bottom {
@@ -1528,8 +1561,7 @@ blockquote {
 // Post Navigation
 .post-navigation {
     padding: 3rem 0;
-    border-top: 1px solid $color-border;
-    background: $color-bg-light;
+    background: $color-bg;
 
     .container {
         display: flex;
@@ -1733,17 +1765,24 @@ blockquote {
         display: flex;
     }
 
+    .lang-nav--desktop {
+        display: none;
+    }
+
     .main-nav {
         position: fixed;
         top: $header-height;
         left: 0;
         right: 0;
+        bottom: 0;
         background: $color-bg;
         padding: 2rem;
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s;
+        z-index: 999;
+        overflow-y: auto;
 
         &.active {
             transform: translateY(0);
@@ -1754,6 +1793,19 @@ blockquote {
         ul {
             flex-direction: column;
             gap: 1.5rem;
+        }
+
+        .lang-nav--mobile {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid $color-border;
+
+            a {
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+            }
         }
     }
 
