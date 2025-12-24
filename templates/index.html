@@ -6,19 +6,31 @@
 {% block content %}
 <section class="hero">
     <div class="hero-background">
-        <img src="{{ get_url(path='images/hero-bg.jpg') }}" alt="Arquitectura" loading="eager">
+        <img src="{{ get_url(path='images/hero-bg.jpg') }}" alt="{% if lang == 'en' %}Architecture{% elif lang == 'it' %}Architettura{% else %}Arquitectura{% endif %}" loading="eager">
     </div>
     <div class="hero-content container">
-        <p class="hero-tagline">ARQUITECTURA · PATRIMONIO · REFLEXIÓN</p>
-        <h1>{{ config.description }}</h1>
+        <p class="hero-tagline">{% if lang == "en" %}ARCHITECTURE · HERITAGE · REFLECTION{% elif lang == "it" %}ARCHITETTURA · PATRIMONIO · RIFLESSIONE{% else %}ARQUITECTURA · PATRIMONIO · REFLEXIÓN{% endif %}</p>
+        <h1>{% if lang == "en" %}Architecture and heritage conservation. Life is energy: pure creative energy.{% elif lang == "it" %}Architettura e conservazione del patrimonio. La vita è energia: pura energia creativa.{% else %}{{ config.description }}{% endif %}</h1>
     </div>
 </section>
 
+{% if lang == "en" %}
+{% set articulos = get_section(path="articulos/_index.md", lang="en") %}
+{% elif lang == "it" %}
+{% set articulos = get_section(path="articulos/_index.md", lang="it") %}
+{% else %}
 {% set articulos = get_section(path="articulos/_index.md") %}
+{% endif %}
 {% if articulos.pages | length > 0 %}
 <section class="articles-section">
     <div class="container">
-        {{ sections::section_header(title="Artículos destacados", link_url=get_url(path='articulos'), link_text="Ver todos los artículos") }}
+        {% if lang == "en" %}
+        {{ sections::section_header(title="Featured Articles", link_url="/en/articulos/", link_text="View all articles") }}
+        {% elif lang == "it" %}
+        {{ sections::section_header(title="Articoli in evidenza", link_url="/it/articulos/", link_text="Vedi tutti gli articoli") }}
+        {% else %}
+        {{ sections::section_header(title="Artículos destacados", link_url="/articulos/", link_text="Ver todos los artículos") }}
+        {% endif %}
         <div class="posts-grid">
             {% for article in articulos.pages | slice(end=2) %}
                 {{ cards::post_card(post=article) }}
@@ -30,11 +42,23 @@
 
 {{ sections::quote(text=config.extra.quote.text, author=config.extra.quote.author) }}
 
+{% if lang == "en" %}
+{% set trabajos = get_section(path="trabajos/_index.md", lang="en") %}
+{% elif lang == "it" %}
+{% set trabajos = get_section(path="trabajos/_index.md", lang="it") %}
+{% else %}
 {% set trabajos = get_section(path="trabajos/_index.md") %}
+{% endif %}
 {% if trabajos.pages | length > 0 %}
 <section class="trabajos-section">
     <div class="container">
-        {{ sections::section_header(title="Trabajos recientes", link_url=get_url(path='trabajos'), link_text="Ver todos los trabajos") }}
+        {% if lang == "en" %}
+        {{ sections::section_header(title="Recent Works", link_url="/en/trabajos/", link_text="View all works") }}
+        {% elif lang == "it" %}
+        {{ sections::section_header(title="Lavori recenti", link_url="/it/trabajos/", link_text="Vedi tutti i lavori") }}
+        {% else %}
+        {{ sections::section_header(title="Trabajos recientes", link_url="/trabajos/", link_text="Ver todos los trabajos") }}
+        {% endif %}
         <div class="posts-grid">
             {% for trabajo in trabajos.pages | slice(end=2) %}
                 {{ cards::post_card(post=trabajo) }}

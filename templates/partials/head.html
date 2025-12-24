@@ -12,13 +12,20 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{{ current_url | default(value=config.base_url) }}">
 
+{# Hreflang for multilingual SEO #}
+{% set base_path = current_path | default(value="/") | trim_start_matches(pat="/en/") | trim_start_matches(pat="/it/") %}
+<link rel="alternate" hreflang="es" href="{{ config.base_url }}{{ base_path }}">
+<link rel="alternate" hreflang="en" href="{{ config.base_url }}/en{{ base_path }}">
+<link rel="alternate" hreflang="it" href="{{ config.base_url }}/it{{ base_path }}">
+<link rel="alternate" hreflang="x-default" href="{{ config.base_url }}{{ base_path }}">
+
 {# Open Graph / Facebook #}
 <meta property="og:type" content="{% if page %}article{% else %}website{% endif %}">
 <meta property="og:url" content="{{ current_url | default(value=config.base_url) }}">
 <meta property="og:title" content="{{ title | default(value=config.title) }}">
 <meta property="og:description" content="{{ description | default(value=config.description) }}">
 <meta property="og:site_name" content="{{ config.title }}">
-<meta property="og:locale" content="es_ES">
+<meta property="og:locale" content="{% if lang == 'en' %}en_US{% elif lang == 'it' %}it_IT{% else %}es_ES{% endif %}">
 {% if page.extra.image %}
 <meta property="og:image" content="{{ get_url(path=page.extra.image) }}">
 {% elif section.extra.image %}

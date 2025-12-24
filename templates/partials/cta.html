@@ -1,6 +1,8 @@
+{% set lang_prefix = "" %}
+{% if lang == "en" %}{% set lang_prefix = "/en" %}{% elif lang == "it" %}{% set lang_prefix = "/it" %}{% endif %}
 <section class="cta-section">
     <div class="container">
-        <h2>¿Hablamos de arquitectura?</h2>
-        <a href="{{ get_url(path='sobre-mi') }}#contacto" class="btn btn-white">Contactar <span class="arrow">→</span></a>
+        <h2>{% if lang == "en" %}Shall we talk about architecture?{% elif lang == "it" %}Parliamo di architettura?{% else %}¿Hablamos de arquitectura?{% endif %}</h2>
+        <a href="{{ lang_prefix }}/sobre-mi/#{% if lang == "en" %}contact{% elif lang == "it" %}contatto{% else %}contacto{% endif %}" class="btn btn-white">{% if lang == "en" %}Contact{% elif lang == "it" %}Contatto{% else %}Contactar{% endif %} <span class="arrow">-></span></a>
     </div>
 </section>

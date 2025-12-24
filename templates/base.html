@@ -6,7 +6,7 @@
     {% block head %}{% endblock %}
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <a href="#main-content" class="skip-link">{% if lang == "en" %}Skip to main content{% elif lang == "it" %}Vai al contenuto principale{% else %}Saltar al contenido principal{% endif %}</a>
 
     {% include "partials/header.html" %}
 

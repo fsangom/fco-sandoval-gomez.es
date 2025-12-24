@@ -200,6 +200,34 @@ h3 { font-size: 1.5rem; }
     }
 }
 
+// Language Navigation Switcher
+.lang-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-left: 1rem;
+
+    a {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: $color-text-light;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: all 0.2s;
+
+        &:hover {
+            color: $color-primary;
+            background: $color-bg-light;
+        }
+
+        &.active {
+            color: $color-bg;
+            background: $color-primary;
+        }
+    }
+}
+
 // Main content offset for fixed header
 main {
     padding-top: $header-height;

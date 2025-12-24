@@ -27,6 +27,19 @@ anchors = "on"
 highlight_code = true
 highlight_theme = "css"
 
+# Multilingual configuration
+[languages.en]
+title = "Francisco Sandoval Gómez"
+description = "Architecture and heritage conservation. Life is energy: pure creative energy."
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+
+[languages.it]
+title = "Francisco Sandoval Gómez"
+description = "Architettura e conservazione del patrimonio. La vita è energia: pura energia creativa."
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+
 [extra]
 author = "Francisco Sandoval Gómez"
 email = "frc.sandoval@gmail.com"
@@ -38,7 +51,62 @@ instagram = "https://instagram.com/mr.dovale"
 linkedin = "https://www.linkedin.com/in/francisco-sandoval-gomez-arq/"
 researchgate = "https://www.researchgate.net/profile/Francisco-Gomez-53"
 
-# Quote for homepage
+# Quote for homepage (ES default)
 [extra.quote]
 text = "La arquitectura es el testigo insobornable de la historia, porque no se puede hablar de un gran edificio sin reconocer en él el testigo de una época, su cultura, su sociedad, sus intenciones..."
 author = "Octavio Paz"
+
+# UI Translations
+[extra.i18n.es]
+nav_articulos = "Artículos"
+nav_trabajos = "Trabajos"
+nav_investigacion = "Investigación"
+nav_publicaciones = "Publicaciones externas"
+nav_sobre_mi = "Sobre mí"
+btn_contact = "Contactar"
+btn_view_all = "Ver todos"
+btn_previous = "Anterior"
+btn_next = "Siguiente"
+page_of = "Página %d de %d"
+cta_question = "¿Hablamos de arquitectura?"
+cta_thanks = "Gracias por pasarte por aquí"
+footer_rights = "Todos los derechos reservados."
+footer_nav = "NAVEGACIÓN"
+footer_contact = "CONTACTO"
+footer_dev = "Desarrollado por"
+
+[extra.i18n.en]
+nav_articulos = "Articles"
+nav_trabajos = "Works"
+nav_investigacion = "Research"
+nav_publicaciones = "External Publications"
+nav_sobre_mi = "About me"
+btn_contact = "Contact"
+btn_view_all = "View all"
+btn_previous = "Previous"
+btn_next = "Next"
+page_of = "Page %d of %d"
+cta_question = "Shall we talk about architecture?"
+cta_thanks = "Thanks for stopping by"
+footer_rights = "All rights reserved."
+footer_nav = "NAVIGATION"
+footer_contact = "CONTACT"
+footer_dev = "Developed by"
+
+[extra.i18n.it]
+nav_articulos = "Articoli"
+nav_trabajos = "Lavori"
+nav_investigacion = "Ricerca"
+nav_publicaciones = "Pubblicazioni esterne"
+nav_sobre_mi = "Chi sono"
+btn_contact = "Contatto"
+btn_view_all = "Vedi tutti"
+btn_previous = "Precedente"
+btn_next = "Successivo"
+page_of = "Pagina %d di %d"
+cta_question = "Parliamo di architettura?"
+cta_thanks = "Grazie per essere passato"
+footer_rights = "Tutti i diritti riservati."
+footer_nav = "NAVIGAZIONE"
+footer_contact = "CONTATTO"
+footer_dev = "Sviluppato da"

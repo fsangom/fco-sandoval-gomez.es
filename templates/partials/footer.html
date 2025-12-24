@@ -1,29 +1,31 @@
+{% set lang_prefix = "" %}
+{% if lang == "en" %}{% set lang_prefix = "/en" %}{% elif lang == "it" %}{% set lang_prefix = "/it" %}{% endif %}
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
             <div class="footer-about">
                 <h3 class="footer-logo">Francisco Sandoval Gómez</h3>
-                <p>Arquitectura y conservación del patrimonio. La vida es energía: pura energía creativa.</p>
+                <p>{% if lang == "en" %}Architecture and heritage conservation. Life is energy: pure creative energy.{% elif lang == "it" %}Architettura e conservazione del patrimonio. La vita è energia: pura energia creativa.{% else %}Arquitectura y conservación del patrimonio. La vida es energía: pura energía creativa.{% endif %}</p>
             </div>
             <div class="footer-nav">
-                <h4>NAVEGACIÓN</h4>
+                <h4>{% if lang == "en" %}NAVIGATION{% elif lang == "it" %}NAVIGAZIONE{% else %}NAVEGACIÓN{% endif %}</h4>
                 <ul>
-                    <li><a href="{{ get_url(path='articulos') }}">Artículos</a></li>
-                    <li><a href="{{ get_url(path='trabajos') }}">Trabajos</a></li>
-                    <li><a href="{{ get_url(path='investigacion') }}">Investigación</a></li>
-                    <li><a href="{{ get_url(path='sobre-mi') }}">Sobre mí</a></li>
+                    <li><a href="{{ lang_prefix }}/articulos/">{% if lang == "en" %}Articles{% elif lang == "it" %}Articoli{% else %}Artículos{% endif %}</a></li>
+                    <li><a href="{{ lang_prefix }}/trabajos/">{% if lang == "en" %}Works{% elif lang == "it" %}Lavori{% else %}Trabajos{% endif %}</a></li>
+                    <li><a href="{{ lang_prefix }}/investigacion/">{% if lang == "en" %}Research{% elif lang == "it" %}Ricerca{% else %}Investigación{% endif %}</a></li>
+                    <li><a href="{{ lang_prefix }}/sobre-mi/">{% if lang == "en" %}About me{% elif lang == "it" %}Chi sono{% else %}Sobre mí{% endif %}</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
-                <h4>CONTACTO</h4>
+                <h4>{% if lang == "en" %}CONTACT{% elif lang == "it" %}CONTATTO{% else %}CONTACTO{% endif %}</h4>
                 <ul>
                     <li><a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; {{ now() | date(format="%Y") }} Francisco Sandoval Gómez. Todos los derechos reservados.</p>
-            <p class="footer-credit">Desarrollado por <a href="https://chemaclass.com" target="_blank" rel="noopener">Chema</a></p>
+            <p>&copy; {{ now() | date(format="%Y") }} Francisco Sandoval Gómez. {% if lang == "en" %}All rights reserved.{% elif lang == "it" %}Tutti i diritti riservati.{% else %}Todos los derechos reservados.{% endif %}</p>
+            <p class="footer-credit">{% if lang == "en" %}Developed by{% elif lang == "it" %}Sviluppato da{% else %}Desarrollado por{% endif %} <a href="https://chemaclass.com" target="_blank" rel="noopener">Chema</a></p>
         </div>
     </div>
 </footer>

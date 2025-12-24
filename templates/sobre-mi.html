@@ -12,16 +12,7 @@
                 <img src="{{ get_url(path='images/sando-avatar.jpg') }}" alt="Francisco Sandoval Gómez">
             </div>
             <div class="sobre-mi-intro">
-                <div class="intro-header">
-                    {{ sections::page_header_styled(title=page.title, description=page.description | default(value="")) }}
-                    {% if page.extra.alternate_url %}
-                    <div class="lang-switcher">
-                        <span class="lang-current">{{ page.extra.lang | upper }}</span>
-                        <span class="lang-divider">|</span>
-                        <a href="{{ page.extra.alternate_url }}" class="lang-link">{{ page.extra.alternate_lang | upper }}</a>
-                    </div>
-                    {% endif %}
-                </div>
+                {{ sections::page_header_styled(title=page.title, description=page.description | default(value="")) }}
             </div>
         </div>
         <div class="prose">
@@ -34,7 +25,7 @@
 {% block cta %}
 <section class="cta-section cta-section--simple">
     <div class="container">
-        <p>{% if page.extra.lang == "en" %}Thanks for stopping by{% else %}Gracias por pasarte por aquí{% endif %}</p>
+        <p>{% if lang == "en" %}Thanks for stopping by{% elif lang == "it" %}Grazie per essere passato{% else %}Gracias por pasarte por aquí{% endif %}</p>
     </div>
 </section>
 {% endblock %}
