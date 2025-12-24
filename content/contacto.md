@@ -1,4 +1,7 @@
 +++
 title = "Contacto"
-template = "contacto.html"
+template = "redirect.html"
+
+[extra]
+redirect_to = "/sobre-mi/#contacto"
 +++

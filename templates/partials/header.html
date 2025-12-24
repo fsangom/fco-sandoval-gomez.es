@@ -9,8 +9,7 @@
                 <li><a href="{{ get_url(path='trabajos') }}" {% if current_path is starting_with("/trabajos") %}class="active"{% endif %}>Trabajos</a></li>
                 <li><a href="{{ get_url(path='investigacion') }}" {% if current_path is starting_with("/investigacion") %}class="active"{% endif %}>Investigación</a></li>
                 <li><a href="{{ get_url(path='publicaciones') }}" {% if current_path is starting_with("/publicaciones") %}class="active"{% endif %}>Publicaciones externas</a></li>
-                <li><a href="{{ get_url(path='sobre-mi') }}" {% if current_path is starting_with("/sobre-mi") %}class="active"{% endif %}>Sobre mí</a></li>
-                <li><a href="{{ get_url(path='contacto') }}" {% if current_path is starting_with("/contacto") %}class="active"{% endif %}>Contacto</a></li>
+                <li><a href="{{ get_url(path='sobre-mi') }}" {% if current_path is starting_with("/sobre-mi") or current_path is starting_with("/contacto") %}class="active"{% endif %}>Sobre mí</a></li>
             </ul>
         </nav>
         <button class="menu-toggle" aria-label="Menú">
