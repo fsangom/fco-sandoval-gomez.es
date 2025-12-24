@@ -13,6 +13,30 @@
     var DEBOUNCE_DELAY = 300;
     var MAX_RESULTS = 8;
 
+    var sectionLabels = {
+        es: {
+            articulos: 'Artículo',
+            investigacion: 'Investigación',
+            publicaciones: 'Publicación',
+            trabajos: 'Trabajo',
+            'sobre-mi': 'Sobre mí'
+        },
+        en: {
+            articulos: 'Article',
+            investigacion: 'Research',
+            publicaciones: 'Publication',
+            trabajos: 'Work',
+            'sobre-mi': 'About'
+        },
+        it: {
+            articulos: 'Articolo',
+            investigacion: 'Ricerca',
+            publicaciones: 'Pubblicazione',
+            trabajos: 'Lavoro',
+            'sobre-mi': 'Chi sono'
+        }
+    };
+
     function init() {
         searchToggle = document.querySelector('.search-toggle');
         searchBox = document.querySelector('.search-box');
@@ -125,6 +149,21 @@
         displayResults(results.slice(0, MAX_RESULTS), query);
     }
 
+    function getSectionFromUrl(url) {
+        var sections = ['articulos', 'investigacion', 'publicaciones', 'trabajos', 'sobre-mi'];
+        for (var i = 0; i < sections.length; i++) {
+            if (url.indexOf('/' + sections[i] + '/') !== -1) {
+                return sections[i];
+            }
+        }
+        return null;
+    }
+
+    function getSectionLabel(section) {
+        var labels = sectionLabels[config.lang] || sectionLabels.es;
+        return labels[section] || '';
+    }
+
     function displayResults(results, query) {
         if (results.length === 0) {
             searchResults.innerHTML = '<div class="search-no-results">' + config.noResults + '</div>';
@@ -139,8 +178,11 @@
                 ? highlightMatch(truncate(doc.description, 120), query)
                 : '';
             var url = doc.id || '';
+            var section = getSectionFromUrl(url);
+            var sectionLabel = section ? getSectionLabel(section) : '';
 
             return '<a href="' + escapeHtml(url) + '" class="search-result-item" role="option">' +
+                (sectionLabel ? '<span class="search-result-type">' + sectionLabel + '</span>' : '') +
                 '<div class="search-result-title">' + title + '</div>' +
                 (description ? '<div class="search-result-description">' + description + '</div>' : '') +
                 '</a>';

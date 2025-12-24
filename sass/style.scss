@@ -345,6 +345,16 @@ h3 { font-size: 1.5rem; }
     }
 }
 
+.search-result-type {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $color-accent;
+    margin-bottom: 0.25rem;
+}
+
 .search-result-title {
     font-size: 0.9rem;
     font-weight: 500;
@@ -1600,6 +1610,9 @@ blockquote {
 
 // Prose styles for article content
 .prose {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $color-border;
+
     h2 {
         margin-top: 4rem;
     }
@@ -1694,35 +1707,73 @@ blockquote {
 
 // Post Navigation
 .post-navigation {
-    padding: 3rem 0;
-    background: $color-bg;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 
-    .container {
+    .nav-links {
         display: flex;
         justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .nav-placeholder {
+        flex: 1;
     }
 
     a {
         display: flex;
         flex-direction: column;
         gap: 0.25rem;
-        max-width: 45%;
+        max-width: 48%;
+        padding: 1rem;
+        border-radius: 8px;
+        transition: background 0.2s;
+
+        &:hover {
+            background: $color-bg-light;
+        }
     }
 
     .nav-label {
-        font-size: 0.85rem;
-        color: $color-text-light;
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: $color-accent;
     }
 
     .nav-title {
         font-family: $font-serif;
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: $color-primary;
+        line-height: 1.4;
+    }
+
+    .nav-prev {
+        align-items: flex-start;
     }
 
     .nav-next {
+        align-items: flex-end;
         text-align: right;
         margin-left: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .post-navigation .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .post-navigation a {
+        max-width: 100%;
+    }
+
+    .post-navigation .nav-next {
+        align-items: flex-start;
+        text-align: left;
     }
 }
 
