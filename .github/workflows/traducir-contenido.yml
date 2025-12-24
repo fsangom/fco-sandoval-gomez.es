@@ -1,0 +1,103 @@
+name: Traducir Contenido
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/**/*.md'
+      - '!content/**/*.en.md'
+      - '!content/**/*.it.md'
+
+# ============================================================================
+# CONFIGURACIÓN
+# ============================================================================
+env:
+  # Claude model for translations. Options:
+  # - claude-haiku-4-20250514 (fastest, cheapest)
+  # - claude-sonnet-4-20250514 (balanced)
+  # - claude-opus-4-20250514 (best quality)
+  # See: https://docs.anthropic.com/en/docs/about-claude/models
+  CLAUDE_MODEL: "claude-haiku-4-20250514"
+
+permissions:
+  contents: write
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    # Skip if commit message indicates it's from the translation workflow
+    if: "!contains(github.event.head_commit.message, '[skip-translate]')"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Get changed Spanish files
+        id: changed
+        run: |
+          # Get list of changed .md files (excluding .en.md and .it.md)
+          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD -- 'content/**/*.md' | grep -v '\.en\.md$' | grep -v '\.it\.md$' || true)
+
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No Spanish content files changed"
+            echo "has_files=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changed files:"
+            echo "$CHANGED_FILES"
+            # Convert to JSON array for the next step
+            FILES_JSON=$(echo "$CHANGED_FILES" | jq -R -s -c 'split("\n") | map(select(length > 0))')
+            echo "files=$FILES_JSON" >> $GITHUB_OUTPUT
+            echo "has_files=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Translate changed files
+        if: steps.changed.outputs.has_files == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { translateAndSave } = require('./.github/scripts/translator.js');
+            const fs = require('fs');
+
+            const files = ${{ steps.changed.outputs.files }};
+            const model = '${{ env.CLAUDE_MODEL }}';
+
+            if (!process.env.ANTHROPIC_API_KEY) {
+              console.log('ANTHROPIC_API_KEY not set, skipping translations');
+              return;
+            }
+
+            console.log(`Using model: ${model}`);
+            console.log(`Files to translate: ${files.length}`);
+
+            for (const file of files) {
+              try {
+                // Check if file exists (might have been deleted)
+                if (!fs.existsSync(file)) {
+                  console.log(`Skipping ${file} (file does not exist)`);
+                  continue;
+                }
+
+                console.log(`Translating: ${file}`);
+                await translateAndSave(file, 'en', process.env.ANTHROPIC_API_KEY, fs, model);
+                await translateAndSave(file, 'it', process.env.ANTHROPIC_API_KEY, fs, model);
+              } catch (error) {
+                console.error(`Failed to translate ${file}: ${error.message}`);
+              }
+            }
+
+      - name: Commit translations
+        if: steps.changed.outputs.has_files == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add content/
+          if git diff --staged --quiet; then
+            echo "No translation changes to commit"
+          else
+            git commit -m "feat: auto-translate content to EN and IT [skip-translate]"
+            git push
+          fi
