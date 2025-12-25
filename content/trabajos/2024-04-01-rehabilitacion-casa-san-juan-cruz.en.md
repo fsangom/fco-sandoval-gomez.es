@@ -6,7 +6,7 @@ date = 2024-04-01
 category = "Rehabilitation"
 location = "Caravaca de la Cruz, Murcia"
 year = "2020-2025"
-image = "images/trabajos/casa-san-juan-cruz.jpg"
+image = "images/trabajos/casa-san-juan-cruz/sando-trabajo-san-juan.jpeg"
 +++
 
 The Casa de San Juan de la Cruz, located in Plaza del Templete at the foot of Cuesta de la Cruz, is a building over 400 years old with origins in the second half of the 16th century. According to tradition, it was the dwelling that San Juan de la Cruz rented to initiate the foundation of the Discalced Carmelite convent and the place where the mystic saint stayed during his more than seven visits to the town.

@@ -6,7 +6,7 @@ date = 2024-04-01
 category = "Riabilitazione"
 location = "Caravaca de la Cruz, Murcia"
 year = "2020-2025"
-image = "images/trabajos/casa-san-juan-cruz.jpg"
+image = "images/trabajos/casa-san-juan-cruz/sando-trabajo-san-juan.jpeg"
 +++
 
 La Casa de San Juan de la Cruz, situata nella Plaza del Templete ai piedi della Cuesta de la Cruz, e un immobile di oltre 400 anni con origini nella seconda meta del XVI secolo. Secondo la tradizione, fu l'abitazione che San Juan de la Cruz affitto per avviare la fondazione del convento dei Carmelitani Scalzi e il luogo dove il santo mistico soggiorno nei suoi oltre sette viaggi nella localita.
