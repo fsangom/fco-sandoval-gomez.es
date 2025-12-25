@@ -22,7 +22,9 @@
 {% set articulos = get_section(path="articulos/_index.md") %}
 {% endif %}
 {% if articulos.pages | length > 0 %}
-<section class="articles-section">
+{% set articles_count = articulos.pages | length %}
+{% if articles_count > 4 %}{% set articles_count = 4 %}{% endif %}
+<section class="articles-section articles-section--compact">
     <div class="container">
         {% if lang == "en" %}
         {{ sections::section_header(title="Featured Articles", link_url="/en/articulos/", link_text="View all articles") }}
@@ -31,8 +33,8 @@
         {% else %}
         {{ sections::section_header(title="Artículos destacados", link_url="/articulos/", link_text="Ver todos los artículos") }}
         {% endif %}
-        <div class="posts-grid">
-            {% for article in articulos.pages | slice(end=2) %}
+        <div class="posts-grid posts-grid--cols-{{ articles_count }}">
+            {% for article in articulos.pages | sort(attribute="date") | reverse | slice(end=articles_count) %}
                 {{ cards::post_card(post=article) }}
             {% endfor %}
         </div>

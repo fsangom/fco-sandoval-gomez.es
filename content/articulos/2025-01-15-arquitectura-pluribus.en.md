@@ -1,0 +1,16 @@
++++
+title = "The Architecture of Pluribus"
+description = "An analysis of the architectural decisions in Vince Gilligan's series Pluribus, where Spanish colonial style contrasts with the futuristic narrative of the dystopia."
+date = 2025-01-15
+[extra]
+category = "REFLECTIONS"
+image = "images/articulos/arquitectura-pluribus/main.jpg"
++++
+
+At this point, it is undeniable that the cinematography and settings in Vince Gilligan's series are particularly well-crafted (Breaking Bad and Better Call Saul are good examples of this). His latest creation, the intriguing dystopia of Pluribus, offers a panorama inspired by the technological advances of contemporary society that relies on science as a fundamental pillar, making possible in the plot the detection of an extraterrestrial signal 600 light-years away or work with the genome in advanced laboratories. Avant-garde or futuristic-tinged architecture usually accompanies plots of this kind to reinforce that sense of pulsating novelty. This can be observed in films like Passengers, Ex Machina, or in many episodes of Black Mirror.
+
+However, this is not the case in Pluribus, or at least not in the protagonist's domestic environment. Carol Sturka, a writer of romantic and fantasy novels, lives in a housing development on the outskirts of Albuquerque where the homes share an aesthetic based on earthy tones that displays its wooden structures to the exterior, completely removed from the futuristic concept. Carol lives at the end of the cul-de-sac, the last house in the development, which somehow gives her the necessary singularity of the series' protagonist, but which in reality is just another cookie-cutter house in the suburban development model. Inside, wooden beams resting on corbels with volutes can be observed. The walls, between semicircular arches, present light earth tones with softened and rounded edges more typical of traditional architecture than the sharp and rectilinear lines of futuristic forms, and their materials reproduce renders and stuccos instead of pure whites and modern metallics.
+
+Indeed, the protagonist's house is in the style that Americans agreed to call colonial. Specifically, it resembles the Castilian dwellings whose model the Spanish reproduced in America from the late 15th century onwards. This house in New Mexico draws from the models of the past by reproducing its identifying aesthetic elements. However, the organisational structure and layout is foreign to those traditional models, so at its core this colonial style in Carol's house is an artifice, a historicist coating on a contemporary suburban house.
+
+This can be interpreted as a deliberate dissonance by Gilligan, another touch of originality in this dystopia, or perhaps he is trying to convey that the taste for these revivals in certain contexts is precisely a sign of our times and a prediction for the near future. In any case, it remains curious that the Calatrava-designed Bilbao airport was chosen in the second episode of the series as the meeting place for characters of various nationalities. A futuristic touch that moves away from the domestic and serves as a meeting place for a few individuals who have escaped the pluribus.
