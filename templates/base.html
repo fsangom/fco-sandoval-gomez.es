@@ -20,6 +20,18 @@
 
     {% include "partials/footer.html" %}
 
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="{% if lang == 'en' %}Close{% elif lang == 'it' %}Chiudi{% else %}Cerrar{% endif %}">&times;</button>
+        <button class="lightbox-prev" onclick="navigateLightbox(event, -1)" aria-label="{% if lang == 'en' %}Previous{% elif lang == 'it' %}Precedente{% else %}Anterior{% endif %}">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+            <div id="lightbox-counter" class="lightbox-counter"></div>
+        </div>
+        <button class="lightbox-next" onclick="navigateLightbox(event, 1)" aria-label="{% if lang == 'en' %}Next{% elif lang == 'it' %}Successivo{% else %}Siguiente{% endif %}">&#10095;</button>
+    </div>
+
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const mainNav = document.querySelector('.main-nav');
@@ -40,6 +52,73 @@
                 mainNav.classList.remove('active');
                 menuToggle.classList.remove('active');
                 menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Lightbox functionality
+        let currentGallery = null;
+        let currentIndex = 0;
+        let galleryImages = [];
+
+        function openLightbox(galleryId, index) {
+            const gallery = document.querySelector(`[data-gallery-id="${galleryId}"]`);
+            if (!gallery) return;
+
+            currentGallery = galleryId;
+            galleryImages = Array.from(gallery.querySelectorAll('.gallery-item img'));
+            currentIndex = index;
+
+            updateLightboxImage();
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            if (event.target.classList.contains('lightbox') ||
+                event.target.classList.contains('lightbox-close')) {
+                document.getElementById('lightbox').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function navigateLightbox(event, direction) {
+            event.stopPropagation();
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = galleryImages.length - 1;
+            if (currentIndex >= galleryImages.length) currentIndex = 0;
+            updateLightboxImage();
+        }
+
+        function updateLightboxImage() {
+            const img = galleryImages[currentIndex];
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox-img').alt = img.alt;
+            document.getElementById('lightbox-caption').textContent = img.alt || '';
+            document.getElementById('lightbox-counter').textContent =
+                `${currentIndex + 1} / ${galleryImages.length}`;
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            if (!lightbox.classList.contains('active')) return;
+
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            } else if (e.key === 'ArrowLeft') {
+                navigateLightbox(e, -1);
+            } else if (e.key === 'ArrowRight') {
+                navigateLightbox(e, 1);
+            }
+        });
+
+        // External links: open in new tab with icon
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            if (!link.hostname.includes(window.location.hostname)) {
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener noreferrer');
+                link.classList.add('external-link');
             }
         });
     </script>

@@ -43,6 +43,11 @@ body:
       description: Tipo de proyecto
       options:
         - Rehabilitación
+        - Restauración
+        - Obra nueva
+        - Proyecto
+        - Dirección de obra
+        - Consultoría
         - Investigación
     validations:
       required: true

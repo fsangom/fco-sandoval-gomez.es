@@ -1,0 +1,19 @@
+{% set gallery_id = id | default(value="gallery-" ~ range(end=9999) | first) %}
+{% set image_list = body | trim | split(pat="
+") %}
+<div class="gallery" data-gallery-id="{{ gallery_id }}">
+    <div class="gallery-grid">
+        {% for img_path in image_list %}
+        {% if img_path | trim != "" %}
+        <figure class="gallery-item" data-index="{{ loop.index0 }}">
+            <img
+                src="{{ get_url(path=img_path | trim) }}"
+                alt=""
+                loading="lazy"
+                onclick="openLightbox('{{ gallery_id }}', {{ loop.index0 }})"
+            >
+        </figure>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>

@@ -28,7 +28,9 @@ description = "Escribe aqui una descripcion breve del proyecto (1-2 frases)"
 date = 2025-01-01
 
 [extra]
-# Categoria del proyecto. Opciones: "Rehabilitacion" o "Investigacion"
+# Categoria del proyecto. Opciones:
+# "Rehabilitacion", "Restauracion", "Obra nueva", "Proyecto",
+# "Direccion de obra", "Consultoria", "Investigacion"
 category = "Rehabilitacion"
 
 # Ubicacion del proyecto (ciudad/region)
