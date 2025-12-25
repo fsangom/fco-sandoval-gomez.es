@@ -1,5 +1,5 @@
 +++
-title = "San Juan de la Cruz House Museum Project"
+title = "San Juan de la Cruz House Museum"
 description = "Renovation project of a 16th-century building in Plaza del Templete, Caravaca de la Cruz, for its conversion into the San Juan de la Cruz House Museum, applying criteria of maximum respect for the interior and low environmental impact techniques."
 date = 2024-01-20
 [extra]
