@@ -4,9 +4,10 @@ description = "Libro sobre la arquitectura del agua y el territorio en la época
 date = 2020-01-01
 [extra]
 category = "Libro"
-year = "2020"
 coauthors = "Antonio Albardonedo Freire, Ana Patrícia Alho, Candela Bandres"
 [[extra.links]]
 name = "ResearchGate"
 url = "https://www.researchgate.net/publication/340597530_Perspectivas_del_agua_Arquitectura_del_agua_y_territorio_en_la_epoca_moderna"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

@@ -4,8 +4,9 @@ description = "Estudio sobre el patrimonio medieval de Caravaca de la Cruz, anal
 date = 2024-10-01
 [extra]
 category = "Artículo"
-year = "2024"
 [[extra.links]]
 name = "ResearchGate"
 url = "https://www.researchgate.net/publication/385843245_CARAVACA_DE_LA_CRUZ_INTRAMUROS_LAS_CALLES_Y_LA_CERCA_URBANA_COMO_PATRIMONIO_MEDIEVAL"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

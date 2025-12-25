@@ -6,3 +6,5 @@ date = 2024-01-11
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/construccion-tierra-patrimonio-visos-futuro/"
 +++
+
+*Full content is available at the external link.*

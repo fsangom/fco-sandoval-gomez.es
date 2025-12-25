@@ -4,8 +4,9 @@ description = "At the beginning of 2010, during the course of some works, the me
 date = 2024-10-01
 [extra]
 category = "Article"
-year = "2024"
 [[extra.links]]
 name = "ResearchGate"
 url = "https://www.researchgate.net/publication/385815569_La_puerta_medieval_del_castillo_de_Caravaca_de_la_Cruz_estudio_constructivo_y_criterios_de_intervencion"
 +++
+
+*Full content is available at the external link.*

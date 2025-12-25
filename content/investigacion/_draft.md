@@ -37,7 +37,6 @@ category = "Artículo"
 
 # Año de publicacion o rango de años del proyecto
 # Ejemplos: "2025" o "2020-2024"
-year = "2025"
 
 # OPCIONAL: Coautores separados por coma
 # Si no hay coautores, borra o comenta esta linea con #

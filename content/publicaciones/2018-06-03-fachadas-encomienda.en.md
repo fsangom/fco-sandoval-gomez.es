@@ -6,3 +6,5 @@ date = 2018-06-03
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/fachadas-en-la-arquitectura-tradicional-el-caso-de-la-encomienda-2/"
 +++
+
+*Full content is available at the external link.*

@@ -6,3 +6,5 @@ date = 2023-10-19
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/urbi-et-orbi-escritos-sobre-la-ciudad/"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

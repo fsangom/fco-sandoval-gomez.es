@@ -6,3 +6,5 @@ date = 2022-12-31
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/reparar-o-sustituir/"
 +++
+
+*Full content is available at the external link.*

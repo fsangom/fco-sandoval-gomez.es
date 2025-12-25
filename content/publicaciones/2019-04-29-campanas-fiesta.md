@@ -6,3 +6,5 @@ date = 2019-04-29
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/las-campanas-y-la-fiesta-2/"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

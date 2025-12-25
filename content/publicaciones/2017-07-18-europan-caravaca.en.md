@@ -6,3 +6,5 @@ date = 2017-07-18
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/el-europan-que-gano-caravaca-2/"
 +++
+
+*Full content is available at the external link.*

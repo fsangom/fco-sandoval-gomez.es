@@ -6,3 +6,5 @@ date = 2024-04-29
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/el-templete-banadero-de-caravaca-de-la-cruz-un-insolito-monumento-de-un-rito-centenario/"
 +++
+
+*Il contenuto completo è disponibile nel link esterno.*

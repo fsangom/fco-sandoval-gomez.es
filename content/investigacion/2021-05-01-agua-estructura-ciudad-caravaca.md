@@ -4,9 +4,10 @@ description = "La existencia de un punto para el abastecimiento de agua ha sido 
 date = 2021-05-01
 [extra]
 category = "Artículo"
-year = "2021"
 coauthors = "Javier Martí Talavera, Víctor Ruiz Álvarez, Marcos Ruiz Álvarez"
 [[extra.links]]
 name = "ResearchGate"
 url = "https://www.researchgate.net/publication/352283151_El_agua_en_la_estructura_de_la_ciudad_acequias_y_transformaciones_urbanas_en_Caravaca_de_la_Cruz"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

@@ -6,3 +6,5 @@ date = 2019-10-24
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/la-desaparecida-arquitectura-de-los-anos-veinte-en-caravaca-2/"
 +++
+
+*Full content is available at the external link.*

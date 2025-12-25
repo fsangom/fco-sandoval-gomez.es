@@ -6,3 +6,5 @@ date = 2020-07-22
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/elementos-peculiares-en-la-arquitectura-de-la-comarca-del-noroeste-2/"
 +++
+
+*Full content is available at the external link.*

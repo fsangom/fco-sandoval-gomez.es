@@ -6,3 +6,5 @@ date = 2019-09-25
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/gota-fria-causa-y-efecto-sobre-zonas-urbanizadas-2/"
 +++
+
+*Il contenuto completo è disponibile nel link esterno.*

@@ -6,3 +6,5 @@ date = 2018-09-13
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/la-comarca-del-noroeste-y-rio-mula-posee-tres-cascos-antiguos-declarados-conjunto-historico-artistico-2/"
 +++
+
+*Il contenuto completo è disponibile nel link esterno.*

@@ -6,3 +6,5 @@ date = 2025-01-13
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/el-ovalo-y-la-escalera/"
 +++
+
+*Il contenuto completo è disponibile nel link esterno.*

@@ -6,3 +6,5 @@ date = 2025-10-15
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/por-que-no-es-buena-idea-cubrir-tejados-tradicionales-con-espuma-de-poliuretano/"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

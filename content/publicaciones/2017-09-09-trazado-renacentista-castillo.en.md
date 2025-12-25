@@ -6,3 +6,5 @@ date = 2017-09-09
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/el-trazado-renacentista-en-el-castillo-de-caravaca-2/"
 +++
+
+*Full content is available at the external link.*

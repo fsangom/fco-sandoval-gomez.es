@@ -6,3 +6,5 @@ date = 2019-03-28
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/la-ermita-del-santo-en-caravaca-2/"
 +++
+
+*Il contenuto completo è disponibile nel link esterno.*

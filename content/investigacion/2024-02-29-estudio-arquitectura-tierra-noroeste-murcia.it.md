@@ -5,6 +5,7 @@ date = 2024-02-29
 
 [extra]
 category = "Conferenza"
-year = "2024"
 youtube = "g7s3CrqRYNs"
 +++
+
+*Il contenuto completo è disponibile nel link esterno.*

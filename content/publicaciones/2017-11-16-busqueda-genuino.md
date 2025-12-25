@@ -6,3 +6,5 @@ date = 2017-11-16
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/la-busqueda-de-lo-genuino-2/"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

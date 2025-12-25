@@ -6,3 +6,5 @@ date = 2025-02-20
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/un-ejemplo-de-construccion-sostenible-la-boveda-plana-de-construir-en-piedra-hoy/"
 +++
+
+*Il contenuto completo è disponibile nel link esterno.*

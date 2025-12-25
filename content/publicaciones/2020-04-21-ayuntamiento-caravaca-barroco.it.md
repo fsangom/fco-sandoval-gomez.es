@@ -6,3 +6,5 @@ date = 2020-04-21
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/el-ayuntamiento-de-caravaca-de-la-cruz-una-obra-barroca-como-genesis-de-la-plaza-del-arco-2/"
 +++
+
+*Il contenuto completo è disponibile nel link esterno.*

@@ -6,3 +6,5 @@ date = 2019-07-24
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/estrategias-bioclimaticas-en-el-urbanismo-el-jardin-del-coso-2/"
 +++
+
+*Il contenuto completo è disponibile nel link esterno.*

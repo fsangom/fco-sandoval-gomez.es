@@ -6,3 +6,5 @@ date = 2018-10-05
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/el-castillo-miro-a-mula-como-sostenedor-de-sus-privilegios-ahora-es-mula-quien-mira-hacia-su-castillo-2/"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

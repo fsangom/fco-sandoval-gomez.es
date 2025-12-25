@@ -4,3 +4,5 @@ description = "Academic work and scientific publications on heritage, conservati
 sort_by = "date"
 paginate_by = 20
 +++
+
+*Full content is available at the external link.*

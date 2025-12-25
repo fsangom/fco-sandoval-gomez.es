@@ -6,3 +6,5 @@ date = 2022-03-13
 source = "La Verdad"
 url = "https://www.laverdad.es/murcia/caravaca/meticuloso-trabajo-excelente-20220313172350-nt.html"
 +++
+
+*Full content is available at the external link.*

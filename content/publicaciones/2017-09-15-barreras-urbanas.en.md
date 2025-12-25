@@ -6,3 +6,5 @@ date = 2017-09-15
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/acerca-de-las-barreras-urbanas-2/"
 +++
+
+*Full content is available at the external link.*

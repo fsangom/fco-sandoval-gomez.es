@@ -6,3 +6,5 @@ date = 2019-01-24
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/retos-para-la-ciudad-del-siglo-xxi-2/"
 +++
+
+*Full content is available at the external link.*

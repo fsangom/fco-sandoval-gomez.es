@@ -6,3 +6,5 @@ date = 2017-06-24
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/patrimonio-amenazado-en-caravaca-2/"
 +++
+
+*Il contenuto completo è disponibile nel link esterno.*

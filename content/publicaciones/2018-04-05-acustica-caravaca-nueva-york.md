@@ -6,3 +6,5 @@ date = 2018-04-05
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/el-misterio-de-la-acustica-que-comparten-caravaca-y-nueva-york-2/"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

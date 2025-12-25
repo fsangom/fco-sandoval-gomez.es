@@ -6,3 +6,5 @@ date = 2018-08-09
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/la-linea-y-el-foco-en-el-urbanismo-barroco-murcia-en-la-bienal-de-venecia-2/"
 +++
+
+*Il contenuto completo è disponibile nel link esterno.*

@@ -39,6 +39,26 @@
 
         <div class="article-body prose">
             {{ page.content | safe }}
+
+            {# External links for investigacion (extra.links array) #}
+            {% if page.extra.links %}
+            <div class="external-links">
+                {% for link in page.extra.links %}
+                <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="external-link-button">
+                    {{ link.name }}
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {# External link for publicaciones (extra.url with source) #}
+            {% if page.extra.url and page.extra.source %}
+            <div class="external-links">
+                <a href="{{ page.extra.url }}" target="_blank" rel="noopener noreferrer" class="external-link-button">
+                    {{ page.extra.source }}
+                </a>
+            </div>
+            {% endif %}
         </div>
 
         {% if page.extra.gallery %}

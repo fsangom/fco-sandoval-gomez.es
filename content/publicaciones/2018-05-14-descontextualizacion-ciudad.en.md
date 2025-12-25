@@ -6,3 +6,5 @@ date = 2018-05-14
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/la-descontextualizacion-de-la-ciudad-2/"
 +++
+
+*Full content is available at the external link.*

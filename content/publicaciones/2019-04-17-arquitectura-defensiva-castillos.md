@@ -6,3 +6,5 @@ date = 2019-04-17
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/arquitectura-defensiva-transformacion-y-evolucion-de-los-castillos-2/"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

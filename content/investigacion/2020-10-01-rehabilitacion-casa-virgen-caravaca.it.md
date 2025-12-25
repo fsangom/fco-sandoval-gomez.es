@@ -4,8 +4,9 @@ description = "La casa edificata da don Andres de Quesada, popolarmente conosciu
 date = 2020-10-01
 [extra]
 category = "Articolo"
-year = "2020"
 [[extra.links]]
 name = "ResearchGate"
 url = "https://www.researchgate.net/publication/344906264_Rehabilitacion_de_la_Casa_de_la_Virgen_en_Caravaca_de_la_Cruz_-_XXVI_Jornadas_de_Patrimonio_de_la_Region_de_Murcia"
 +++
+
+*Il contenuto completo è disponibile nel link esterno.*

@@ -6,3 +6,5 @@ date = 2018-07-05
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/la-arquitectura-de-las-ermitas-la-encarnacion-de-caravaca-2/"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

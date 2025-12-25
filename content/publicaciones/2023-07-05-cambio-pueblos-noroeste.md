@@ -6,3 +6,5 @@ date = 2023-07-05
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/francisco-sandoval-cambio-pueblos-noroeste-mula/"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

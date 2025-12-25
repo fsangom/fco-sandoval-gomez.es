@@ -4,8 +4,9 @@ description = "El empleo del yeso en revestimientos y terminaciones ha resultado
 date = 2023-10-01
 [extra]
 category = "Artículo"
-year = "2023"
 [[extra.links]]
 name = "ResearchGate"
 url = "https://www.researchgate.net/publication/376783728_TERMINACIONES_CON_YESO_AL_JABONCILLO_APROXIMACION_A_UNA_TECNICA_CASI_EXTINTA"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

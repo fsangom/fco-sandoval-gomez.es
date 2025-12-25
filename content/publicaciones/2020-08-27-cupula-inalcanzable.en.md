@@ -6,3 +6,5 @@ date = 2020-08-27
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/la-cupula-inalcanzable-2/"
 +++
+
+*Full content is available at the external link.*

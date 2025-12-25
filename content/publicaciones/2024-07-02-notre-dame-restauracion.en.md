@@ -6,3 +6,5 @@ date = 2024-07-02
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/notre-dame-de-paris-una-restauracion-paradigmatica/"
 +++
+
+*Full content is available at the external link.*

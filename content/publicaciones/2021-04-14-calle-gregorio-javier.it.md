@@ -6,3 +6,5 @@ date = 2021-04-14
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/una-breve-historia-de-caravaca-a-traves-de-la-calle-del-escritor-gregorio-javier-2/"
 +++
+
+*Il contenuto completo è disponibile nel link esterno.*

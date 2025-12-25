@@ -6,3 +6,5 @@ date = 2018-12-12
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/construir-con-piedra-seca-patrimonio-de-la-humanidad-2/"
 +++
+
+*Full content is available at the external link.*

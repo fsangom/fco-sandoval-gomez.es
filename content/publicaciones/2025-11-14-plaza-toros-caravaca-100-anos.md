@@ -6,3 +6,5 @@ date = 2025-11-14
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/la-plaza-de-toros-de-caravaca-de-la-cruz-100-anos-de-una-fachada-iconica/"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

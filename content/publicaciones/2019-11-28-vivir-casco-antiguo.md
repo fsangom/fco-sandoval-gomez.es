@@ -6,3 +6,5 @@ date = 2019-11-28
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/vivir-en-el-casco-antiguo-2/"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

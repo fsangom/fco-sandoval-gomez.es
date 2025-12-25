@@ -6,3 +6,5 @@ date = 2020-04-07
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/la-casa-estuche-de-la-vida-y-maquina-de-felicidad-2/"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

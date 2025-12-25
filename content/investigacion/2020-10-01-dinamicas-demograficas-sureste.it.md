@@ -4,9 +4,10 @@ description = "Lo spopolamento delle aree rurali e la principale sfida demografi
 date = 2020-10-01
 [extra]
 category = "Relazione"
-year = "2020"
 coauthors = "Victor Ruiz Alvarez, Javier Marti Talavera, Ruben Gimenez Garcia"
 [[extra.links]]
 name = "ResearchGate"
 url = "https://www.researchgate.net/publication/348678849_Dinamicas_demograficas_en_el_nodo_inter-provincial_del_sureste_de_la_peninsula_iberica_iniciativas_y_propuestas_de_actuacion"
 +++
+
+*Il contenuto completo è disponibile nel link esterno.*

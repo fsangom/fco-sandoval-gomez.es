@@ -6,3 +6,5 @@ date = 2022-04-29
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/la-calle-y-el-rito-en-las-fiestas-de-caravaca-2/"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

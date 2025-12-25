@@ -6,3 +6,5 @@ date = 2025-12-12
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/el-patrimonio-medieval-de-caravaca-de-la-cruz-como-una-puerta-y-una-plaza-nos-hablan-de-nuestro-pasado/"
 +++
+
+*Il contenuto completo è disponibile nel link esterno.*

@@ -6,3 +6,5 @@ date = 2020-11-12
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/una-torre-recortada-en-el-castillo-de-caravaca-y-el-escudo-del-maestre-suarez-de-figueroa-2/"
 +++
+
+*El contenido completo está disponible en el enlace externo.*

@@ -6,3 +6,5 @@ date = 2020-05-25
 source = "El Noroeste Digital"
 url = "https://elnoroestedigital.com/el-modelado-3d-aplicado-al-patrimonio-cultural-2/"
 +++
+
+*Il contenuto completo è disponibile nel link esterno.*
