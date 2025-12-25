@@ -118,7 +118,15 @@
             if (!link.hostname.includes(window.location.hostname)) {
                 link.setAttribute('target', '_blank');
                 link.setAttribute('rel', 'noopener noreferrer');
-                link.classList.add('external-link');
+                // Don't add icon to elements that already have one (SVG inside or special card classes)
+                var hasIcon = link.querySelector('svg') ||
+                    link.classList.contains('link-card') ||
+                    link.classList.contains('contact-card') ||
+                    link.closest('.link-card') ||
+                    link.closest('.contact-card');
+                if (!hasIcon) {
+                    link.classList.add('external-link');
+                }
             }
         });
     </script>

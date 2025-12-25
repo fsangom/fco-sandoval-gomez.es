@@ -24,7 +24,7 @@
 {% if articulos.pages | length > 0 %}
 {% set articles_count = articulos.pages | length %}
 {% if articles_count > 4 %}{% set articles_count = 4 %}{% endif %}
-<section class="articles-section articles-section--compact">
+<section class="articles-section">
     <div class="container">
         {% if lang == "en" %}
         {{ sections::section_header(title="Featured Articles", link_url="/en/articulos/", link_text="View all articles") }}
