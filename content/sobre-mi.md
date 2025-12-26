@@ -18,14 +18,14 @@ description = "Francisco Sandoval Gómez es arquitecto especializado en conserva
 
 <div class="education-list">
     <div class="education-card">
-        <img src="/images/upv-logo.png" alt="UPV" class="education-logo">
+        <img src="/images/upv-logo.png" alt="UPV" class="education-logo" style="margin-top: -15px; margin-bottom: -10px">
         <div class="education-info">
             <span class="education-degree">Máster en Conservación del Patrimonio Arquitectónico</span>
             <span class="education-university">Universitat Politècnica de València · España</span>
         </div>
     </div>
     <div class="education-card">
-        <img src="/images/upc-logo.png" alt="UPC" class="education-logo">
+        <img src="/images/upc-logo.png" alt="UPC" class="education-logo" style="margin-top: -30px; margin-bottom: -30px">
         <div class="education-info">
             <span class="education-degree">Arquitecto</span>
             <span class="education-university">Universidad Politécnica de Cartagena · España</span>
