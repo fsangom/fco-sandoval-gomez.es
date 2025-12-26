@@ -170,7 +170,7 @@
             {{ item.title }}
             {% endif %}
         </h3>
-        {% if item.extra.original_title %}
+        {% if item.extra.original_title and item.extra.original_title != item.title %}
         <p class="investigacion-card__original-title">{{ item.extra.original_title }}</p>
         {% endif %}
         {% if item.extra.coauthors %}

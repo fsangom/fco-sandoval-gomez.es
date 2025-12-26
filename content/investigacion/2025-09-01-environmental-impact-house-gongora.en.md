@@ -3,7 +3,6 @@ title = "Approximation to the Environmental Impact of the House of Gongora, Cehe
 description = "This article addresses an approximation to the environmental impacts of the construction of the historic House of Gongora in Cehegin (Murcia), originally built in the 16th century using traditional earth architecture."
 date = 2025-09-01
 [extra]
-original_title = "Approximation to the Environmental Impact of the House of Gongora, Cehegin (Murcia, Spain): an LCA Perspective"
 category = "Paper"
 coauthors = "Alberto Quintana Gallardo, Vanesa Saez, Ignacio Guillen"
 [[extra.links]]
