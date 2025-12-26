@@ -99,18 +99,27 @@ jobs:
             const model = '${{ env.CLAUDE_MODEL }}';
 
             if (!process.env.ANTHROPIC_API_KEY) {
-              console.log('ANTHROPIC_API_KEY not set, skipping translations');
+              core.warning('ANTHROPIC_API_KEY not set, skipping translations');
               return;
             }
 
+            console.log(`Translating file: ${filename}`);
+            console.log(`Using model: ${model}`);
+            console.log(`API key present: ${process.env.ANTHROPIC_API_KEY ? 'yes' : 'no'}`);
+
             try {
-              console.log(`Using model: ${model}`);
+              console.log('Starting EN translation...');
               await translateAndSave(filename, 'en', process.env.ANTHROPIC_API_KEY, fs, model);
+              console.log('EN translation completed');
+
+              console.log('Starting IT translation...');
               await translateAndSave(filename, 'it', process.env.ANTHROPIC_API_KEY, fs, model);
-              console.log('Translations completed successfully');
+              console.log('IT translation completed');
+
+              console.log('All translations completed successfully');
             } catch (error) {
-              console.error('Translation failed:', error.message);
-              console.log('Continuing without translations...');
+              core.error(`Translation failed: ${error.message}`);
+              console.error('Full error:', error);
             }
 
       - name: Commit and push
