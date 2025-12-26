@@ -73,7 +73,7 @@ function replaceField(frontmatter, field, newValue) {
 }
 
 // Default model - can be overridden via workflow env
-const DEFAULT_MODEL = 'claude-haiku-4-20250514';
+const DEFAULT_MODEL = 'claude-3-5-haiku-20241022';
 
 /**
  * Call Claude API to translate text
