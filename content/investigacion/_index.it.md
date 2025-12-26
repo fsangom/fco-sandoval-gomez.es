@@ -2,7 +2,7 @@
 title = "Ricerca"
 description = "Lavoro accademico e pubblicazioni scientifiche su patrimonio, conservazione e architettura vernacolare."
 sort_by = "date"
-paginate_by = 20
+paginate_by = 15
 +++
 
 *Il contenuto completo è disponibile nel link esterno.*

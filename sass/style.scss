@@ -797,6 +797,10 @@ main {
 .sobre-mi-page {
     padding: 4rem 0 5rem;
     background: $color-bg-light;
+
+    .prose {
+        border-bottom: none;
+    }
 }
 
 .sobre-mi-header {
