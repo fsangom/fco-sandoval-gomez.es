@@ -117,6 +117,17 @@
         }, DEBOUNCE_DELAY);
     }
 
+    var sectionPriority = {
+        'articulos': 20,
+        'trabajos': 10
+    };
+
+    function getSectionPriority(url) {
+        if (url.indexOf('/articulos/') !== -1) return sectionPriority.articulos;
+        if (url.indexOf('/trabajos/') !== -1) return sectionPriority.trabajos;
+        return 0;
+    }
+
     function performSearch(query) {
         if (documents.length === 0 || query.length < 2) {
             searchResults.innerHTML = '';
@@ -136,14 +147,16 @@
             var descMatch = description.indexOf(queryLower) !== -1;
 
             if (titleMatch || descMatch) {
+                var matchScore = titleMatch ? 2 : 1;
+                var priorityScore = getSectionPriority(doc.id || '');
                 results.push({
                     doc: doc,
-                    score: titleMatch ? 2 : 1
+                    score: priorityScore + matchScore
                 });
             }
         }
 
-        // Sort by score (title matches first)
+        // Sort by score (section priority, then title matches)
         results.sort(function(a, b) { return b.score - a.score; });
 
         displayResults(results.slice(0, MAX_RESULTS), query);

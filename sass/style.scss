@@ -1530,10 +1530,14 @@ blockquote {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr 0.5fr;
     gap: 4rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid $color-border;
+
+    @media (min-width: 1200px) {
+        grid-template-columns: 2fr 1fr 0.5fr;
+    }
 }
 
 .footer-logo {
@@ -1946,6 +1950,12 @@ blockquote {
 
     &:hover::after {
         opacity: 1;
+    }
+
+    &[href*="localhost"]::after,
+    &[href*="127.0.0.1"]::after,
+    .site-footer &[href*="chemaclass.com"]::after {
+        display: none;
     }
 }
 
