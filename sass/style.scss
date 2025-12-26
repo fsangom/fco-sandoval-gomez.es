@@ -1592,10 +1592,6 @@ blockquote {
     gap: 4rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid $color-border;
-
-    @media (min-width: 1200px) {
-        grid-template-columns: 2fr 1fr 0.5fr;
-    }
 }
 
 .footer-logo {
