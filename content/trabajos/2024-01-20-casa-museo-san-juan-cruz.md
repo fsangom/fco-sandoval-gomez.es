@@ -31,6 +31,12 @@ images/trabajos/casa-san-juan-cruz/9c-1024x577.jpg
 
 En el año 2020 se intervinieron las fachadas y la cubierta, pero el interior se encontraba en muy mal estado. En el año 2021 se inició el proyecto para rehabilitar el inmueble y convertirlo en la Casa Museo de San Juan de la Cruz en Caravaca. Los criterios aplicados fueron el máximo respeto al interior del edificio y sus valores históricos y culturales, y el empleo de técnicas y materiales de bajo impacto ambiental.
 
+{% media(align="left") %}
+![Interior rehabilitado de la Casa Museo](/images/trabajos/casa-san-juan-cruz/sando-trabajo-san-juan-2.jpg)
+
+El resultado de la intervención muestra el cuidado puesto en preservar la esencia del edificio histórico, manteniendo los elementos originales como las vigas de madera y los acabados de cal tradicionales.
+{% end %}
+
 El programa establecido por la Fundación Conde Santa Ana de las Torres, propietaria del edificio, consistía en reproducir en planta baja los valores históricos y etnográficos del inmueble, generar salas expositivas en planta primera que acercasen la vida de San Juan de la Cruz y su relación con Caravaca al visitante, y una biblioteca y sala de meditación en la última planta.
 
 Para llevar esto a cabo, se edificó un volumen de nueva planta junto al patio para albergar ascensor, escalera de evacuación y aseos, de tal manera que el edificio histórico tuviese la mínima afección de nuevas instalaciones. Dicho volumen se diseñó con una fachada blanca a base de mortero de cal de forma que resultase neutra en relación con el edificio histórico anexo y garantizase una lectura contemporánea que se diferenciase de la fachada anexa preexistente, al tiempo que se reproducía el alero de triple hilada de teja para lograr una integración adecuada.
