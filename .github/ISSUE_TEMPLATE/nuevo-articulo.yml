@@ -60,11 +60,31 @@ body:
     id: content
     attributes:
       label: Contenido
-      description: El contenido completo del artículo. Puedes usar Markdown (## para títulos, **negrita**, *cursiva*, etc.)
+      description: |
+        El contenido completo del artículo. Puedes usar Markdown (## para títulos, **negrita**, *cursiva*, etc.)
+
+        **Imagen con texto:** Para alinear una imagen junto a texto, usa:
+        - `{% media(align="left") %}` - imagen a la izquierda, texto a la derecha
+        - `{% media(align="right") %}` - imagen a la derecha, texto a la izquierda
+
+        Ejemplo:
+        ```
+        {% media(align="left") %}
+        ![](url-imagen.jpg)
+
+        Texto que aparece junto a la imagen.
+        {% end %}
+        ```
       placeholder: |
         ## Primera sección
 
         Escribe aquí el contenido...
+
+        {% media(align="left") %}
+        ![](arrastra-imagen-aqui.jpg)
+
+        Texto que aparece a la derecha de la imagen.
+        {% end %}
 
         ## Segunda sección
 

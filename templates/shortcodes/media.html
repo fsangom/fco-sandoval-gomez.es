@@ -1,0 +1,4 @@
+{% set alignment = align | default(value="left") %}
+<div class="media-block media-{{ alignment }}">
+    {{ body | safe }}
+</div>
