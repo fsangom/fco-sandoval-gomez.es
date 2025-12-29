@@ -35,6 +35,10 @@ En el año 2020 se intervinieron las fachadas y la cubierta, pero el interior se
 ![Interior rehabilitado de la Casa Museo](/images/trabajos/casa-san-juan-cruz/sando-trabajo-san-juan-2.jpg)
 
 El resultado de la intervención muestra el cuidado puesto en preservar la esencia del edificio histórico, manteniendo los elementos originales como las vigas de madera y los acabados de cal tradicionales.
+
+La recuperación de los espacios interiores ha permitido crear un recorrido museístico que conecta al visitante con la vida cotidiana del siglo XVI, respetando la escala humilde del edificio original y su atmósfera de recogimiento espiritual.
+
+Los materiales empleados —cal, yeso, madera— dialogan con la arquitectura preexistente, creando una continuidad visual y táctil que refuerza la autenticidad del conjunto.
 {% end %}
 
 El programa establecido por la Fundación Conde Santa Ana de las Torres, propietaria del edificio, consistía en reproducir en planta baja los valores históricos y etnográficos del inmueble, generar salas expositivas en planta primera que acercasen la vida de San Juan de la Cruz y su relación con Caravaca al visitante, y una biblioteca y sala de meditación en la última planta.

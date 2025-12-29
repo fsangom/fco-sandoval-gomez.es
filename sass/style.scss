@@ -1891,72 +1891,53 @@ blockquote {
 
 // Media Block - Image + Text layouts
 .media-block {
-    display: grid;
-    grid-template-columns: 40% 1fr;
+    display: flex;
     gap: 2rem;
     margin: 2rem 0;
-    align-items: start;
+    align-items: flex-start;
 
-    // First p contains the image - spans first column, all rows
-    > p:first-child {
-        grid-column: 1;
-        grid-row: 1 / -1;
-        margin: 0;
+    .media-image {
+        flex: 0 0 40%;
 
         img {
             width: 100%;
             border-radius: 4px;
             margin: 0;
         }
+
+        p {
+            margin: 0;
+        }
     }
 
-    // Text paragraphs stack in second column
-    > p:not(:first-child) {
-        grid-column: 2;
-        margin: 0;
+    .media-text {
+        flex: 1;
 
-        &:not(:nth-child(2)) {
-            margin-top: 1rem;
+        p {
+            margin: 0;
+
+            &:not(:first-child) {
+                margin-top: 1rem;
+            }
         }
     }
 
     &.media-right {
-        grid-template-columns: 1fr 40%;
-
-        > p:first-child {
-            grid-column: 2;
-        }
-
-        > p:not(:first-child) {
-            grid-column: 1;
-        }
+        flex-direction: row-reverse;
     }
 }
 
 @media (max-width: 768px) {
     .media-block {
-        grid-template-columns: 1fr;
+        flex-direction: column;
 
-        > p:first-child {
-            grid-column: 1;
-            grid-row: auto;
-        }
-
-        > p:not(:first-child) {
-            grid-column: 1;
+        .media-image {
+            flex: none;
+            width: 100%;
         }
 
         &.media-right {
-            grid-template-columns: 1fr;
-
-            > p:first-child {
-                grid-column: 1;
-                grid-row: 1;
-            }
-
-            > p:not(:first-child) {
-                grid-column: 1;
-            }
+            flex-direction: column;
         }
     }
 }
