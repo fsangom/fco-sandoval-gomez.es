@@ -32,20 +32,7 @@ images/trabajos/casa-san-juan-cruz/9c-1024x577.jpg
 In 2020, the facades and roof were intervened, but the interior was in very poor condition. In 2021, the project to rehabilitate the property and convert it into the House Museum of San Juan de la Cruz in Caravaca began. The applied criteria were maximum respect for the building's interior and its historical and cultural values, and the use of low environmental impact techniques and materials.
 
 {% media(align="left") %}
-<<<<<<< HEAD
 ![Rehabilitated interior of the House Museum](/images/trabajos/casa-san-juan-cruz/sando-trabajo-san-juan-2.jpg)
-=======
-![Renovated interior of the House Museum](/images/trabajos/casa-san-juan-cruz/sando-trabajo-san-juan-2.jpg)
-
-The result of the intervention shows the care taken to preserve the essence of the historic building, maintaining original elements such as the wooden beams and traditional lime finishes.
-
-The recovery of the interior spaces has created a museum itinerary that connects visitors with daily life in the 16th century, respecting the humble scale of the original building and its atmosphere of spiritual recollection.
-
-The materials used—lime, plaster, wood—dialogue with the pre-existing architecture, creating a visual and tactile continuity that reinforces the authenticity of the ensemble.
-{% end %}
-
-The program established by the Conde Santa Ana de las Torres Foundation, owner of the building, consisted of reproducing the historical and ethnographic values of the property on the ground floor, creating exhibition rooms on the first floor to bring the life of San Juan de la Cruz and his relationship with Caravaca closer to visitors, and a library and meditation room on the top floor.
->>>>>>> a2fd631 (i18n trabajos/2024-01-20-casa-museo-san-juan-cruz post)
 
 The result of the intervention shows the care taken to preserve the essence of the historical building, maintaining original elements such as wooden beams and traditional lime finishes.
 

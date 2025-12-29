@@ -32,20 +32,7 @@ images/trabajos/casa-san-juan-cruz/9c-1024x577.jpg
 Nel 2020 sono state restaurate le facciate e il tetto, ma l'interno versava in pessime condizioni. Nel 2021 è iniziato il progetto per riqualificare l'immobile e trasformarlo nella Casa Museo di San Giovanni della Croce a Caravaca. I criteri applicati sono stati il massimo rispetto dell'interno dell'edificio e dei suoi valori storici e culturali, e l'uso di tecniche e materiali a basso impatto ambientale.
 
 {% media(align="left") %}
-<<<<<<< HEAD
 ![Interno riqualificato della Casa Museo](/images/trabajos/casa-san-juan-cruz/sando-trabajo-san-juan-2.jpg)
-=======
-![Interno riabilitato della Casa Museo](/images/trabajos/casa-san-juan-cruz/sando-trabajo-san-juan-2.jpg)
-
-Il risultato dell'intervento mostra la cura posta nel preservare l'essenza dell'edificio storico, mantenendo gli elementi originali come le travi in legno e le finiture in calce tradizionali.
-
-Il recupero degli spazi interni ha permesso di creare un percorso museale che collega il visitatore con la vita quotidiana del XVI secolo, rispettando la scala umile dell'edificio originale e la sua atmosfera di raccoglimento spirituale.
-
-I materiali impiegati—calce, gesso, legno—dialogano con l'architettura preesistente, creando una continuità visiva e tattile che rafforza l'autenticità dell'insieme.
-{% end %}
-
-Il programma stabilito dalla Fondazione Conde Santa Ana de las Torres, proprietaria dell'edificio, consisteva nel riprodurre al piano terra i valori storici ed etnografici dell'immobile, generare sale espositive al primo piano che avvicinassero la vita di San Juan de la Cruz e la sua relazione con Caravaca al visitatore, e una biblioteca e sala di meditazione all'ultimo piano.
->>>>>>> a2fd631 (i18n trabajos/2024-01-20-casa-museo-san-juan-cruz post)
 
 Il risultato dell'intervento mostra la cura dedicata a preservare l'essenza dell'edificio storico, mantenendo gli elementi originali come le travi in legno e le finiture tradizionali in calce.
 
