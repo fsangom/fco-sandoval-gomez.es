@@ -9,7 +9,7 @@ on:
 # ============================================================================
 env:
   # Usuarios autorizados para crear contenido (separados por coma)
-  AUTHORIZED_USERS: "Chemaclass,CLIENT_USERNAME_HERE"
+  AUTHORIZED_USERS: "Chemaclass,fsangom"
 
   # Claude model for translations. Options:
   # - claude-3-5-haiku-20241022 (fastest, cheapest)
